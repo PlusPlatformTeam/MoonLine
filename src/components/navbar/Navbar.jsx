@@ -4,7 +4,7 @@ import "./navbar.css";
 
 const navbar = () => {
   return (
-    <nav className="bg-white border-gray-200 bg-black">
+    <nav className=" border-gray-200 bg-black">
       <div className="max-w-screen-xl flex flex-wrap items-center mx-2 py-4 ">
         <a href="https://flowbite.com/" className="flex items-center">
           <img src={Logo} className="h-8 mr-3" alt="Flowbite Logo" />
