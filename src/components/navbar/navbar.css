@@ -1,0 +1,6 @@
+@media  (max-width:775px) {
+      .nav-list{
+          display: none !important;
+      }
+      
+}
