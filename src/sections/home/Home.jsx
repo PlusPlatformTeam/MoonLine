@@ -6,7 +6,7 @@ import UnderLine from "../../assets/images/underLine.png";
 
 const Home = () => {
   return (
-    <>
+    <section className="bg-img">
       <Navbar />
       <div className="flex flex-row w-full">
         <div className="md:w-5/12 w-full">
@@ -52,7 +52,7 @@ const Home = () => {
           <img className="w-full p-16 " src={Cards} alt="home cards image" />
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

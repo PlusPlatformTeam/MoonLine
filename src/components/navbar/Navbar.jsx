@@ -16,7 +16,7 @@ const navbar = () => {
           <li>
             <a
               href="#"
-              className="block py-1 pl-3 pr-4  md:bg-transparent  md:bg-transparent"
+              className="block py-1 pl-3 pr-4  md:bg-transparent"
               aria-current="page"
             >
               صفحه اصلی
@@ -64,7 +64,7 @@ const navbar = () => {
           <li className="block">
             <a
               href="#"
-              className="block py-1 pl-3 pr-4  md:bg-transparent  md:bg-transparent text-center justify-center "
+              className="block py-1 pl-3 pr-4  md:bg-transparent text-center justify-center "
               aria-current="page"
             >
               <img
@@ -78,7 +78,7 @@ const navbar = () => {
           <li className="block">
             <a
               href="#"
-              className="block py-1 pl-3 pr-4  md:bg-transparent  md:bg-transparent text-center justify-center "
+              className="block py-1 pl-3 pr-4  md:bg-transparent text-center justify-center "
               aria-current="page"
             >
               <img
