@@ -1,18 +1,17 @@
-body {
+.bg-img {
   background-image: url("../../assets/images/bgHome.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
-body::before {
+.bg-img::before {
   content: "";
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: -1;
   background-image: url("../../assets/images/bgHome.png");
   background-size: cover;
@@ -20,14 +19,13 @@ body::before {
   opacity: 0.5;
 }
 
-body::after {
+.bg-img::after {
   content: "";
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: -1;
   background-image: url("../../assets/images/bgHome.png");
   background-size: cover;
