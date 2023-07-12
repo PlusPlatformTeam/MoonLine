@@ -1,0 +1,28 @@
+.bg-image {
+    background-image: url("../../assets/images/bgStartUp.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  body{
+    overflow-y: hidden ;
+  }
+
+  .light-image {
+    background-image: url("../../assets/images/light-startup.png");
+    background-repeat: no-repeat;
+  }
+
+  .startup-out {
+    animation: slide-out 1s ease-out;
+  }
+  
+  @keyframes slide-out {
+    0% {
+      opacity: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }

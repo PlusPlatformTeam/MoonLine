@@ -5,7 +5,7 @@ import './service.css';
 
 export const Service = () => {
   return (
-    <section className='pt-8 bg-gradiant'>
+    <section className='pt-8 bg-gradiant '>
         <header className='text-center'>
           <div className='relative inline-block px-8 text-center'>
             <p className='absolute right-0 w-48 h-7 bg-semi-transparent-blue'></p>

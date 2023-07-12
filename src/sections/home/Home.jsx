@@ -9,20 +9,19 @@ const Home = () => {
     <section className="bg-img">
       <Navbar />
       <div className="flex flex-row w-full">
-        <div className="md:w-5/12 w-full">
+        <div className="lg:w-5/12 w-full">
           <div className="block w-full relative">
             <h2 className="text-white font-bold text-3xl mt-16 mx-12">
               طراحی مدرن با{" "}
-              <span className="font-bold text-5xl blue-base-color">
+              <span className="relative font-bold text-5xl blue-base-color">
                 مون لاین
+                <img
+                  src={UnderLine}
+                  alt="moonline underline"
+                  className="absolute left-1 top-20 hidden md:block"
+                />
               </span>
             </h2>
-
-            <img
-              src={UnderLine}
-              alt="moonline underline"
-              className="absolute left-48 top-16 hidden md:block"
-            />
           </div>
 
           <h2 className="text-white font-normal text-xl mt-20 mx-12">
