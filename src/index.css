@@ -24,3 +24,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.bg-gradiant-top-bottom{
+  background-image: linear-gradient(#01101F , #022140 );
+}
+.bg-gradiant-bottom-top{
+  background-image: linear-gradient(#022140 , #01101F );
+}

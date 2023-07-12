@@ -1,0 +1,45 @@
+.blue-light-gradiant:hover {
+    border-radius: 6px;
+    opacity: 0.90000000298023224;
+    background: linear-gradient(143deg, rgba(71, 163, 183, 0.44) 0%, rgba(255, 255, 255, 0.00) 100%);
+    backdrop-filter: blur(2px);
+}
+
+.green-light-gradiant:hover {
+    border-radius: 6px;
+    opacity: 0.90000000298023224;
+    background: linear-gradient(143deg, rgba(37, 255, 163, 0.44) 0%, rgba(255, 255, 255, 0.00) 100%);
+    backdrop-filter: blur(2px);
+}
+
+.yellow-light-gradiant:hover {
+    border-radius: 6px;
+    opacity: 0.90000000298023224;
+    background: linear-gradient(143deg, rgba(230, 193, 1, 0.44) 0%, rgba(255, 255, 255, 0.00) 100%);
+    backdrop-filter: blur(2px);
+}
+
+.icon{
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.card-container:hover .icon{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.blue-light-gradiant:hover .blue-icon{
+    color: #0088FF;
+}
+
+.green-light-gradiant:hover .green-icon{
+    color: #08E67E;
+}
+
+.yellow-light-gradiant:hover .yellow-icon{
+    color: #E6C101;
+}
