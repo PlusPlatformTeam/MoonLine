@@ -4,31 +4,3 @@
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
-
-.bg-img::before {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  background-image: url("../../assets/images/bgHome.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-}
-
-.bg-img::after {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  background-image: url("../../assets/images/bgHome.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: scale(1.1);
-}
