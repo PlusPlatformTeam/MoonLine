@@ -20,6 +20,16 @@ body {
 
 .blue-base-color{color: #427DCD;}
 
+.gradiant-top-light {
+  background-image: linear-gradient(to bottom, #022140, #01101F);
+  background-size: cover;
+}
+
+.gradiant-bottom-light {
+  background-image: linear-gradient(to bottom, #01101F, #022140);
+  background-size: cover;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
