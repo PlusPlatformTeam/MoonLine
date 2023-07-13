@@ -28,9 +28,9 @@ const WebApp = () => {
           </button>
         </div>
 
-        <div className="relative w-7/12 hidden lg:block text-end justify-center  ">
-          <img className="absolute w-full p-28 mb-16 z-0 " src={Devices} alt="home cards image" />
-          <img className=" absolute w-full p-24 mb-16 ellipse" src={Balls} alt="balls" />
+        <div className="relative z-0 w-7/12 hidden lg:block text-end justify-center">
+          <img className="absolute w-full p-20 mb-16 z-0 ellipse" src={Devices} alt="home cards image" />
+          <img className="absolute w-full p-14 mb-16 spin" src={Balls} alt="balls" />
 
         </div>
       </div>
