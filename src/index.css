@@ -34,3 +34,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.bg-gradiant-top-bottom{
+  background-image: linear-gradient(#01101F , #022140 );
+}
+.bg-gradiant-bottom-top{
+  background-image: linear-gradient(#022140 , #01101F );
+}
+
+.bg-semi-transparent-blue{
+  background-color: rgba(0, 136, 255, 0.33);
+}
+
+.bg-semi-transparent-green{
+  background-color: rgba(37, 255, 163, 0.33);
+}
+
+.bg-semi-transparent-yellow{
+  background-color: rgba(203, 191, 1, 0.33);
+}

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Home from "./sections/home/Home";
 import StartUp from "./sections/startup/StartUp";
-import { Service } from "./sections/services/Service";
 import Advertisement from "./sections/advertisement/Advertisement";
 import WebApp from "./sections/webapp/WebApp";
 import Design from "./sections/design/Design";
+import Service from "./sections/services/Service";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
