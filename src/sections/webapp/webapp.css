@@ -1,0 +1,23 @@
+
+
+.device-container{
+  position: relative;
+  z-index: 1;
+  background-image: url('../../assets/images/device-webapp.png');
+}
+
+
+.spin{
+  position: absolute;
+  animation: spin 5s linear infinite;
+
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

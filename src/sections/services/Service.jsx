@@ -11,7 +11,7 @@ function Services() {
   };
 
   return (
-    <section className="pt-8 bg-gradiant-top-bottom">
+    <section className="pt-8 gradiant-bottom-light h-100">
       <header className="text-center">
         <div className="relative inline-block px-8 text-center">
           <p
