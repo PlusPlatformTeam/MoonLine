@@ -1,8 +1,7 @@
 import React from "react";
 import Logo from "../../assets/images/navLogo.png";
 import "./navbar.css";
-import FaIcon from "../../assets/images/faIcon.png";
-import EnIcon from "../../assets/images/enIcon.png";
+import LanguageSwitch from "../languageSwitch/LanguageSwitch";
 
 const navbar = () => {
   return (
@@ -60,35 +59,7 @@ const navbar = () => {
           </li>
         </ul>
 
-        <ul className="flex flex-row font-medium p-4 md:p-0 mt-3 md:flex-row md:space-x-4 md:mt-0 md:border-0 text-white  text-end justify-left ">
-          <li className="block">
-            <a
-              href="#"
-              className="block py-1 pl-3 pr-4  md:bg-transparent text-center justify-center "
-              aria-current="page"
-            >
-              <img
-                src={EnIcon}
-                className="w-7 h-7 inline-block  fa-solid fa-clapperboard"
-              />
-              <p>EN</p>
-            </a>
-          </li>
-
-          <li className="block">
-            <a
-              href="#"
-              className="block py-1 pl-3 pr-4  md:bg-transparent text-center justify-center "
-              aria-current="page"
-            >
-              <img
-                src={FaIcon}
-                className="w-7 h-7 inline-block  fa-solid fa-clapperboard"
-              />
-              <p>FA</p>
-            </a>
-          </li>
-        </ul>
+        <LanguageSwitch />
       </div>
     </nav>
   );
