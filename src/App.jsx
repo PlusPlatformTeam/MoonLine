@@ -5,6 +5,10 @@ import Advertisement from "./sections/advertisement/Advertisement";
 import WebApp from "./sections/webapp/WebApp";
 import Design from "./sections/design/Design";
 import Service from "./sections/services/Service";
+import About from "./sections/about/About";
+import Contact from "./sections/contact/Contact";
+
+
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +37,8 @@ const App = () => {
       <WebApp />
       <Design />
       <Advertisement />
+      <About/>
+      <Contact/>
     </main>
   );
 };
