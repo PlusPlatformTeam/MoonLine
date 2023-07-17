@@ -1,0 +1,129 @@
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+
+  label {
+    display: block;
+    width: 130px;
+    height: 40px;
+    background-color: #212122;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 20px #477a8550;
+  }
+
+  
+  label::after {
+    content: attr(data-language);
+    color: #fff;
+    font-weight: bold;
+    padding-top:3px;
+    text-align: center;
+    justify-content:center;
+    width: 32px;
+    height: 32px;
+    background-image:url("../../assets/images/circleToggle.png");
+    background-size: 32px 32px; 
+    position: absolute;
+    border-radius: 70px;
+    top: 4px;
+    left: 4px;
+    transition: 0.5s;
+  }
+
+  
+  
+  input:checked + label:after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+  }
+
+  input:checked + label {
+      background-color: #212122;
+  }
+
+  .lang-txt{
+   color: #7D7D7E
+  }
+
+/* dot pulse */
+
+.snippet{
+  position:absolute;
+  left:61px;
+  top:15px;
+}
+
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #1782BB;
+  color: #1782BB;
+  box-shadow: 9999px 0 0 -5px;
+  animation: dot-pulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+.dot-pulse::before, .dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #1782BB;
+  color: #1782BB;
+}
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px;
+  animation: dot-pulse-before 1.5s infinite linear;
+  animation-delay: 0s;
+}
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px;
+  animation: dot-pulse-after 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dot-pulse-before {
+  0% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+}
+@keyframes dot-pulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+}
+@keyframes dot-pulse-after {
+  0% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+}
+    
