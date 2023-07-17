@@ -8,7 +8,7 @@ import Balls from "../../assets/images/balls.png";
 
 const WebApp = () => {
   return (
-    <section className=" w-full h-screen gradiant-top-light">
+    <section id="webapp" className=" w-full h-screen gradiant-top-light">
       <div className="flex flex-row w-full">
         <div className="lg:w-5/12 w-full mt-16 mx-12">
           <div className="flex flex-row ">

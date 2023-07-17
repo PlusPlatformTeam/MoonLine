@@ -5,7 +5,7 @@ import Icon from "../../assets/images/icon-advertisement.png";
 
 const About = () => {
   return (
-    <section className=" w-full h-screen gradiant-bottom-light">
+    <section id="about" className=" w-full h-screen gradiant-bottom-light">
       <div className="flex flex-row w-full">
         <div className="lg:w-5/12 w-full mt-16 mx-12">
           <div className="flex flex-row ">

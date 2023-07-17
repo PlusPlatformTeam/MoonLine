@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./../../components/navbar/Navbar";
 import "./home.css";
 import Cards from "../../assets/images/homeCards.png";
 import UnderLine from "../../assets/images/underLine.png";
@@ -7,7 +6,6 @@ import UnderLine from "../../assets/images/underLine.png";
 const Home = () => {
   return (
     <section className="bg-img">
-      <Navbar />
       <div className="flex flex-row w-full">
         <div className="lg:w-5/12 w-full">
           <div className="block w-full relative">

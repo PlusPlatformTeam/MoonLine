@@ -7,6 +7,8 @@ import Design from "./sections/design/Design";
 import Service from "./sections/services/Service";
 import About from "./sections/about/About";
 import Contact from "./sections/contact/Contact";
+import Footer from "./sections/footer/Footer";
+import Navbar from './components/navbar/Navbar';
 
 
 
@@ -32,6 +34,7 @@ const App = () => {
   return (
     <main>
       {isLoading ? <StartUp /> : null}
+      <Navbar/>
       <Home />
       <Service />
       <WebApp />
@@ -39,6 +42,7 @@ const App = () => {
       <Advertisement />
       <About/>
       <Contact/>
+      <Footer/>
     </main>
   );
 };
