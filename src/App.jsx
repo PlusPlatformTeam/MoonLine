@@ -9,7 +9,7 @@ import About from "./sections/about/About";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Navbar from './components/navbar/Navbar';
-
+import './i18n/config';
 
 
 const App = () => {
@@ -32,7 +32,7 @@ const App = () => {
   }, [isLoading]);
 
   return (
-    <main>
+    <main dir="ltr">
       {isLoading ? <StartUp /> : null}
       <Navbar/>
       <Home />
