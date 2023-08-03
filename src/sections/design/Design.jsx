@@ -2,7 +2,7 @@ import React from "react";
 import "./design.css";
 import Cards from "../../assets/images/cards-design.png";
 import Icon from "../../assets/images/icon-design.png";
-
+import Button from "../../components/button/Button";
 const Design = () => {
   return (
     <section className=" w-full h-screen gradiant-bottom-light">
@@ -32,12 +32,10 @@ const Design = () => {
             اب ،صصختم دارفا عمجت رد ،نیال نوم .دوشیم هصالخ قالخ
           </p>
 
-          <button
-            type="button"
-            class="text-white my-36 bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-          >
-            نمونه کارهای بیشتر
-          </button>
+          <Button
+            myClass="hover:bg-green-800 bg-custom-green"
+            text="نمونه کارهای بیشتر"
+          />
         </div>
       </div>
     </section>

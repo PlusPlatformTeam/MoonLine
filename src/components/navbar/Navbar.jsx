@@ -36,7 +36,7 @@ const Navbar = () => {
         <ul className="flex flex-col font-medium p-4 md:p-0 mt-3 md:flex-row md:space-x-4 md:mt-0 md:border-0 text-white nav-list text-center justify-center">
           <li>
             <a
-              href="#"
+              href="#home"
               className="block py-1 pl-3 pr-4  md:bg-transparent"
               aria-current="page"
             >
