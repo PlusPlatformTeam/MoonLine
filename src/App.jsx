@@ -10,10 +10,23 @@ import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Navbar from './components/navbar/Navbar';
 import './i18n/config';
+import { useTranslation } from 'react-i18next';
 
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState('en');
+  const [dir, setDir] = useState(t('dir'));
+
+  const changeLanguage = () => {
+    i18n.changeLanguage(language);
+    setLanguage(language);
+  };
+
+  const handleDirChange = (newDir) => {
+    setDir(newDir);
+  };;
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -32,9 +45,9 @@ const App = () => {
   }, [isLoading]);
 
   return (
-    <main dir="ltr">
+    <main dir={dir}>
       {isLoading ? <StartUp /> : null}
-      <Navbar/>
+      <Navbar changeLanguage={changeLanguage} handleDirChange={handleDirChange}/>
       <Home />
       <Service />
       <WebApp />

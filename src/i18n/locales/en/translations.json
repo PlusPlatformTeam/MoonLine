@@ -1,8 +1,9 @@
 {
+    "dir": "rtl",
     "services":{
         "title": "Our Services",
         "desc": "What do we do ?",
-        "webAppTitle": "Website and Application Development",
+        "webAppTitle": "Web & App Development",
         "webAppDesc": "Online services, a risk-free way to succeed and grow your business.",
         "designTitle": "Design and Branding",
         "designDesc": "Visual identity, proper design of your brand elements, a winning leaf for the future of your business.",
