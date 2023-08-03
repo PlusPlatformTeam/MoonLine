@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import "./languageSwitch.css";
 
-const LanguageSwitch = () => {
+const LanguageSwitch = ({ changeLanguage, handleDirChange }) => {
   const [language, setLanguage] = useState("EN");
-
+  
   const handleToggle = () => {
-    setLanguage(language === "EN" ? "FA" : "EN");
+    const newLanguage = language === "EN" ? "FA" : "EN";
+    setLanguage(newLanguage);
+    changeLanguage(newLanguage);
+    const newDir = newLanguage === "FA" ? "rtl" : "ltr";
+    handleDirChange(newDir);
   };
 
+  
   return (
     <>
       <input
@@ -18,7 +23,7 @@ const LanguageSwitch = () => {
       />
 
       <label for="switch" data-language={language === "FA" ? "FA" : "EN"}>
-        <div className="flex flex-row justify-between lang-txt mt-2 mx-2 font-bold">
+        <div className="flex flex-row justify-between mx-2 mt-2 font-bold lang-txt">
           <h1>FA</h1>
           <h1>EN</h1>
         </div>
