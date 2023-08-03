@@ -28,7 +28,7 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => 
           />
         </div>
         <h3 className="my-5 text-3xl text-center">{title}</h3>
-        <p className="mx-3 text-center">{desc}</p>
+        <p className="px-3 text-center">{desc}</p>
         <div className="relative flex justify-center w-full pb-4 mt-24">
           <span className={`flex justify-center items-center icon ${color}`}>
             <FontAwesomeIcon icon={faAngleDown} />

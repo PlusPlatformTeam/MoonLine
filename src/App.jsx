@@ -16,12 +16,12 @@ import { useTranslation } from 'react-i18next';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('FA');
   const [dir, setDir] = useState(t('dir'));
 
-  const changeLanguage = () => {
-    i18n.changeLanguage(language);
-    setLanguage(language);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setLanguage(lng);
   };
 
   const handleDirChange = (newDir) => {
