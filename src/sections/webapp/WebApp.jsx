@@ -4,7 +4,7 @@ import closeTag from "../../assets/images/close-tag.png";
 import OpenTag from "../../assets/images/open-tag.png";
 import Devices from "../../assets/images/device-webapp.png";
 import Balls from "../../assets/images/balls.png";
-
+import Button from "../../components/button/Button";
 
 const WebApp = () => {
   return (
@@ -23,15 +23,23 @@ const WebApp = () => {
             ،امش یعامتجا یاه هکبش رگید یوس زا .دوب دهاوخ ناتدنرب هدننک و هبرجت
             اب ،صصختم دارفا عمجت رد ،نیال نوم .دوشیم هصالخ قالخ
           </p>
-          <button type="button" class="text-white my-36 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            نمونه کارهای بیشتر
-          </button>
+          <Button
+            myClass="hover:bg-blue-500 bg-custom-blue"
+            text="نمونه کارهای بیشتر"
+          />
         </div>
 
         <div className="relative z-0 w-7/12 hidden lg:block text-end justify-center">
-          <img className="absolute w-full p-20 mb-16 z-0 ellipse" src={Devices} alt="home cards image" />
-          <img className="absolute w-full p-14 mb-16 spin" src={Balls} alt="balls" />
-
+          <img
+            className="absolute w-full p-20 mb-16 z-0 ellipse"
+            src={Devices}
+            alt="home cards image"
+          />
+          <img
+            className="absolute w-full p-14 mb-16 spin"
+            src={Balls}
+            alt="balls"
+          />
         </div>
       </div>
     </section>

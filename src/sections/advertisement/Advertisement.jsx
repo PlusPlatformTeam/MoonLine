@@ -2,7 +2,7 @@ import React from "react";
 import "./advertisement.css";
 import Cards from "../../assets/images/cards-advertisement.png";
 import Icon from "../../assets/images/icon-advertisement.png";
-
+import Button from "../../components/button/Button";
 const advertisement = () => {
   return (
     <section className=" w-full h-screen gradiant-top-light">
@@ -19,7 +19,11 @@ const advertisement = () => {
             ،امش یعامتجا یاه هکبش رگید یوس زا .دوب دهاوخ ناتدنرب هدننک و هبرجت
             اب ،صصختم دارفا عمجت رد ،نیال نوم .دوشیم هصالخ قالخ
           </p>
-          <button type="button" class="text-white my-36 bg-yellow-500 hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900">نمونه کارهای بیشتر</button>
+
+          <Button
+            myClass="hover:bg-yellow-600 bg-custom-yellow"
+            text="نمونه کارهای بیشتر"
+          />
         </div>
 
 

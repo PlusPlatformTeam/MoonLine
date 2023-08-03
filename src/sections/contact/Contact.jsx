@@ -5,7 +5,7 @@ import Btn from "../../assets/images/btn-send-text.png";
 const Contact = () => {
   return (
     <section id="contact" className=" w-full flex h-screen gradiant-top-light text-center justify-center">
-      <div className="w-9/12 p-16">
+      <div className="w-full lg:w-9/12 p-4 lg:p-16 ">
         <h1 className="text-white font-bold text-3xl">ارتباط با ما</h1>
         <h1 className="text-white font-normal text-lg my-5">
           ما <span className="blue-base-color">شما</span> را برای همکاری برگزیده
