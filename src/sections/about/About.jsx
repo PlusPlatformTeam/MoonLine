@@ -25,11 +25,6 @@ const About = () => {
               rewind: true,
               pagination: false,
             }}
-            onMounted={(splide) => {
-              // Store the Splide instance in a variable for later use
-              this.splide = splide;
-              console.log(splide)
-            }}
             aria-label="My Favorite Images"
           >
             {data.map(({ img, title, desc, bgColor }, index) => (
