@@ -9,5 +9,27 @@
         "designDesc": "هویت بصری, طراحی اصولی المان های برند شما, برگ برنده ای برای آینده کسب و کار شماست. ",
         "adTitle": "تبلیغات و تولید محتوا",
         "adDesc": "بیشتر و بهتر دیده شدن یک بیزنس وابسته به نگاه افراد است. از این نکته غافل نشوید."
+    },
+    "about":{
+        "pooya":{
+            "name":"پویا صدری",
+            "pro":"Full Stack Developer"
+        },
+        "ali":{
+            "name":"علی عطار",
+            "pro":"Full Stack Developer"
+        },
+        "shahriar":{
+            "name":"شهریار وزیری",
+            "pro":"Full Stack Designer"
+        },
+        "farzad":{
+            "name":"فرزاد فروزان فر",
+            "pro":"Full Stack Developer"
+        },
+        "zahra":{
+            "name":"زهرا کار",
+            "pro":"Motion Designer"
+        }
     }
 }
