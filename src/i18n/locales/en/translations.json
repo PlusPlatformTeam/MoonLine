@@ -9,5 +9,27 @@
         "designDesc": "Visual identity, proper design of your brand elements, a winning leaf for the future of your business.",
         "adTitle": "Advertising and Content Production",
         "adDesc": "Being more and better seen is dependent on people's perspective of a business. Do not overlook this point."
+    },
+    "about":{
+        "pooya":{
+            "name":"Pooya Sadri",
+            "pro":"Full Stack Developer"
+        },
+        "ali":{
+            "name":"Ali Attar",
+            "pro":"Full Stack Developer"
+        },
+        "shahriar":{
+            "name":"Shariar Vaziri",
+            "pro":"Full Stack Designer"
+        },
+        "farzad":{
+            "name":"Farzad Forouzanfar",
+            "pro":"Full Stack Developer"
+        },
+        "zahra":{
+            "name":"Zahra Kar",
+            "pro":"Motion Designer"
+        }
     }
 }
