@@ -25,16 +25,14 @@ const About = () => {
               rewind: true,
               pagination: false,
               autoplay: true,
-              pauseOnHover : false,
+              pauseOnHover: false,
               resetProgress: false,
             }}
             aria-label="About US"
           >
             {data.map(({ img, title, desc, bgColor }, index) => (
               <SplideSlide key={index}>
-                <div
-                  className={`flex justify-center `}
-                >
+                <div className={`flex justify-center `}>
                   <img className="w-5/6" src={img} alt={title} />
                 </div>
                 <div className="text-center">
@@ -53,6 +51,7 @@ const About = () => {
                 </div>
               </SplideSlide>
             ))}
+            <div className="splide__arrows hidden"></div>
           </Splide>
         </div>
       </div>
