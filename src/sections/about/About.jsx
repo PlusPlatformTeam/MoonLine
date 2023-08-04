@@ -24,13 +24,11 @@ const About = () => {
               perPage: 3,
               rewind: true,
               pagination: false,
+              autoplay: true,
+              pauseOnHover : false,
+              resetProgress: false,
             }}
-            onMounted={(splide) => {
-              // Store the Splide instance in a variable for later use
-              this.splide = splide;
-              console.log(splide)
-            }}
-            aria-label="My Favorite Images"
+            aria-label="About US"
           >
             {data.map(({ img, title, desc, bgColor }, index) => (
               <SplideSlide key={index}>
