@@ -24,8 +24,11 @@ const About = () => {
               perPage: 3,
               rewind: true,
               pagination: false,
+              autoplay: true,
+              pauseOnHover : false,
+              resetProgress: false,
             }}
-            aria-label="My Favorite Images"
+            aria-label="About US"
           >
             {data.map(({ img, title, desc, bgColor }, index) => (
               <SplideSlide key={index}>
