@@ -6,7 +6,7 @@ import DotedBg from "../../assets/images/doted-bg.png";
 
 const Footer = () => {
   return (
-    <section className=" w-full">
+    <section className=" w-full overflow-hidden">
       <div className=" w-full flex flex-row">
         <div className="relative">
         

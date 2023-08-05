@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./languageSwitch.css";
+import { useDispatch } from "react-redux";
 
-const LanguageSwitch = ({ changeLanguage, handleDirChange }) => {
+const LanguageSwitch = () => {
   const [language, setLanguage] = useState("EN");
-  
+  const dispatch = useDispatch();
+
   const handleToggle = () => {
+    dispatch({ type: "CHANGE_LANG" });
+    dispatch({ type: "CHANGE_DIR" });
     const newLanguage = language === "EN" ? "FA" : "EN";
     setLanguage(newLanguage);
-    changeLanguage(newLanguage);
-    const newDir = newLanguage === "FA" ? "rtl" : "ltr";
-    handleDirChange(newDir);
   };
 
-  
   return (
     <>
       <input

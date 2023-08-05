@@ -1,5 +1,12 @@
 {
     "dir": "ltr",
+    "navbar":{
+        "home": "صفحه اصلی",
+        "services": "خدمات ما",
+        "about-us": "درباره ما",
+        "contact": "تماس با ما",
+        "portfolio": "نمونه کارها"
+    },
     "services":{
         "title": "خدمات ما",
         "desc": "ما چه کاری انجام میدهیم؟",
