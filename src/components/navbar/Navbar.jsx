@@ -2,8 +2,11 @@ import React, { useRef, useEffect } from "react";
 import Logo from "../../assets/images/navLogo.png";
 import "./navbar.css";
 import LanguageSwitch from "../languageSwitch/LanguageSwitch";
+import { useTranslation } from "react-i18next";
 
-const Navbar = ({changeLanguage, handleDirChange}) => {
+const Navbar = ({ changeLanguage, handleDirChange }) => {
+  const { t } = useTranslation();
+
   const aboutRef = useRef(null);
   const webappRef = useRef(null);
   const servicesRef = useRef(null);
@@ -27,7 +30,7 @@ const Navbar = ({changeLanguage, handleDirChange}) => {
   }, []);
 
   return (
-    <nav dir="rtl" className="w-full bg-black border-gray-200 ">
+    <nav dir="rtl" className="w-full bg-black border-gray-200 overflow-hidden">
       <div className="flex flex-wrap items-center justify-between w-full px-8 py-4 ">
         <a href="https://flowbite.com/" className="flex items-center">
           <img src={Logo} className="h-8 mr-3" alt="Flowbite Logo" />
@@ -40,7 +43,7 @@ const Navbar = ({changeLanguage, handleDirChange}) => {
               className="block py-1 pl-3 pr-4 md:bg-transparent"
               aria-current="page"
             >
-              صفحه اصلی
+              {t("navbar.home")}
             </a>
           </li>
           <li>
@@ -50,7 +53,7 @@ const Navbar = ({changeLanguage, handleDirChange}) => {
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
-              خدمات
+              {t("navbar.services")}
             </a>
           </li>
           <li>
@@ -60,7 +63,7 @@ const Navbar = ({changeLanguage, handleDirChange}) => {
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
-              نمونه کارها
+              {t("navbar.portfolio")}
             </a>
           </li>
           <li>
@@ -70,7 +73,7 @@ const Navbar = ({changeLanguage, handleDirChange}) => {
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
-              تماس با ما
+              {t("navbar.home")}
             </a>
           </li>
           <li>
@@ -80,15 +83,16 @@ const Navbar = ({changeLanguage, handleDirChange}) => {
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
-              درباره ما
+              {t("navbar.about-us")}
             </a>
           </li>
         </ul>
 
-        <LanguageSwitch changeLanguage={changeLanguage} handleDirChange={handleDirChange} />
+        <LanguageSwitch />
       </div>
     </nav>
   );
 };
 
+// export default Navbar;
 export default Navbar;

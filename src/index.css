@@ -45,8 +45,7 @@ border-radius: 10px !important;
 
 
 body {
-  
-  overflow-x:hidden;
+  overflow-x: hidden;
   overflow-y:scroll;
   font-family: 'iranSans', sans-serif;
   direction: rtl;

@@ -4,6 +4,7 @@ import Cards from "../../assets/images/homeCards.png";
 import DobleArrow from "../../assets/images/left-doble-arrow.png";
 import LeftArrowService from "../../assets/images/left-arrow-service.png";
 import UnderLine from "../../assets/images/underLine.png";
+
 const Home = () => {
   return (
     <section id="home" className="bg-img">
@@ -36,12 +37,18 @@ const Home = () => {
             <button class="relative bg-btn_color hover:bg-blue-500 rounded-full w-48 ">
               <div className="flex justify-end">
                 <p className="text-white items-center ml-2 mt-1">سفارش پروژه</p>
-                <img className="h-10 opacity-50" src={DobleArrow} alt="left arrow" />
+                <img
+                  className="h-10 opacity-50"
+                  src={DobleArrow}
+                  alt="left arrow"
+                />
               </div>
             </button>
             <button class=" p-4 pl-6 relative w-48 mr-4 bg-transparent items-center rounded-full border border-blue-400 hover:bg-blue-500 rounded-ful">
-            <div className="flex justify-end">
-                <p className="text-white items-center ml-2 -mt-1">سفارش پروژه</p>
+              <div className="flex justify-end">
+                <p className="text-white items-center ml-2 -mt-1">
+                  سفارش پروژه
+                </p>
                 <img className="h-5 " src={LeftArrowService} alt="left arrow" />
               </div>
             </button>
