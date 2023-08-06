@@ -1,5 +1,12 @@
 {
     "dir": "rtl",
+    "navbar":{
+        "home": "Home",
+        "services": "Services",
+        "about-us": "About Us",
+        "contact": "Contact",
+        "portfolio": "Portfolio"
+    },
     "services":{
         "title": "Our Services",
         "desc": "What do we do ?",

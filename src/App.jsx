@@ -8,25 +8,23 @@ import Service from "./sections/services/Service";
 import About from "./sections/about/About";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
-import Navbar from './components/navbar/Navbar';
-import './i18n/config';
-import { useTranslation } from 'react-i18next';
-
+import Navbar from "./components/navbar/Navbar";
+import "./i18n/config";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const App = () => {
+  const direction = useSelector((state) => state.direction);
+  const lang = useSelector((state) => state.lng);
+
   const [isLoading, setIsLoading] = useState(true);
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState('FA');
-  const [dir, setDir] = useState(t('dir'));
+  const [dir, setDir] = useState(t("dir"));
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    setLanguage(lng);
-  };
-
-  const handleDirChange = (newDir) => {
-    setDir(newDir);
-  };;
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+    setDir(direction);
+  }, [lang, direction]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -47,15 +45,15 @@ const App = () => {
   return (
     <main dir={dir}>
       {isLoading ? <StartUp /> : null}
-      <Navbar changeLanguage={changeLanguage} handleDirChange={handleDirChange}/>
+      <Navbar />
       <Home />
       <Service />
       <WebApp />
       <Design />
       <Advertisement />
-      <About/>
-      <Contact/>
-      <Footer/>
+      <About />
+      <Contact />
+      <Footer />
     </main>
   );
 };
