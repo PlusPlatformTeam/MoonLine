@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./home.css";
 import Cards from "../../assets/images/homeCards.png";
 import DobleArrow from "../../assets/images/left-doble-arrow.png";
@@ -34,11 +34,11 @@ const Home = () => {
   return (
     <section id="home" className="bg-img">
       <div className="flex flex-row w-full">
-        <div className="lg:w-5/12 w-full">
-          <div className="block w-full relative">
-            <h2 className="text-white font-bold text-3xl mt-16 mx-12">
+        <div className="w-full lg:w-5/12">
+          <div className="relative block w-full">
+            <h2 className="mx-12 mt-16 text-3xl font-bold text-white">
               {t("home.modern-design")}{" "}
-              <span className="relative font-bold text-5xl blue-base-color">
+              <span className="relative text-5xl font-bold blue-base-color">
                 {t("moonline")}
                 <img
                   src={UnderLine}
@@ -50,14 +50,13 @@ const Home = () => {
               </span>
             </h2>
           </div>
-
-          <h2 className="text-white font-normal text-xl mt-20 mx-12">
+          <h2 className="mx-12 mt-20 text-xl font-normal text-white">
             {t("home.moonline-team-service")}&nbsp;
             <span className="blue-base-color">{t("home.team-service")}</span>
             &nbsp;{t("home.ready-to-grow")}
           </h2>
 
-          <div className="flex flex-row mt-16 mx-12 w-full mb-2">
+          <div className="flex flex-row w-full mx-12 mt-16 mb-2">
           
               <button class="relative bg-btn_color hover:bg-blue-500 rounded-full w-48 ">
               <a  
@@ -66,7 +65,7 @@ const Home = () => {
               aria-current="page"
               >
                 <div className="flex justify-end">
-                  <p className="text-white items-center ml-2 mt-1">
+                  <p className="items-center mt-1 ml-2 text-white">
                     {t("home.order")}
                   </p>
                   <img
@@ -93,7 +92,7 @@ const Home = () => {
               >
 
               <div className="flex justify-end">
-                <p className="text-white items-center ml-2 -mt-1">
+                <p className="items-center ml-2 -mt-1 text-white">
                   {t("home.moonline-service")}
                 </p>
                 <img
@@ -109,8 +108,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-7/12 hidden lg:block text-end justify-center ">
-          <img className="w-full p-16 " src={Cards} alt="home cards image" />
+        <div className="justify-center hidden w-7/12 lg:block text-end ">
+          <img className="w-full p-16 " src={Cards} alt="home cards" />
         </div>
       </div>
     </section>
