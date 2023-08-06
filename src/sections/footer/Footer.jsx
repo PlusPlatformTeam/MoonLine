@@ -3,13 +3,17 @@ import "./footer.css";
 import data from "./data";
 import Logo from "../../assets/images/footer-image.png";
 import DotedBg from "../../assets/images/doted-bg.png";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const direction = useSelector((state) => state.direction);
+
   return (
     <section className=" w-full overflow-hidden">
       <div className=" w-full flex flex-row">
         <div className="relative">
-        
           <img
             src={DotedBg}
             alt="doted background"
@@ -17,25 +21,33 @@ const Footer = () => {
           />
 
           <div className="flex flew-row absolute  right-16 top-8">
-
             <div className="h-64 w-1 bg-blue-600 "></div>
 
             <div className=" relative right-2 w-28">
-              <h1 className="text-white text-xl font-semibold mt-1 ">صفحه اصلی</h1>
-              <h1 className="text-white text-xl font-semibold mt-7">خدمات</h1>
-              <h1 className="text-white text-xl font-semibold mt-7">نمونه کارها </h1>
-              <h1 className="text-white text-xl font-semibold mt-7">درباره ما</h1>
-              <h1 className="text-white text-xl font-semibold mt-7">تماس با ما</h1>
+              <h1 className="text-white text-xl font-semibold mt-1 ">
+                {t("navbar.home")}
+              </h1>
+              <h1 className="text-white text-xl font-semibold mt-7">
+                {" "}
+                {t("navbar.services")}
+              </h1>
+              <h1 className="text-white text-xl font-semibold mt-7">
+                {t("navbar.portfolio")}{" "}
+              </h1>
+              <h1 className="text-white text-xl font-semibold mt-7">
+              {t("navbar.about-us")}
+
+              </h1>
+              <h1 className="text-white text-xl font-semibold mt-7">
+              {t("navbar.contact")}
+              </h1>
             </div>
-
-
-
           </div>
         </div>
 
         <div className="w-full justify-center text-center block">
           <h1 className="text-white font-bold text-2xl mt-12">
-            Our Socials Networks
+            {t("footer.title")}
           </h1>
 
           <div className=" mt-16 flex flex-row flex-wrap w-full justify-center text-center">
@@ -47,8 +59,11 @@ const Footer = () => {
           </div>
 
           <h1 className="text-white font-bold text-2xl mt-12">
-            All rights reserved. powered by{" "}
-            <span className="blue-base-color">Moonline team</span>
+            {t("footer.all-rights")}{" "}
+            <span className="blue-base-color">
+              {" "}
+              {t("footer.moonline-team")}
+            </span>
           </h1>
         </div>
 

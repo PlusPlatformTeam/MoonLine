@@ -1,5 +1,8 @@
 {
     "dir": "rtl",
+    "moonline":"moonline",
+    "view-more":"View More",
+
     "navbar":{
         "home": "Home",
         "services": "Services",
@@ -7,6 +10,16 @@
         "contact": "Contact",
         "portfolio": "Portfolio"
     },
+
+    "home":{
+        "modern-design":"Modern design with",
+        "moonline-team-service":"Moonline team providing",
+        "team-service":"Website design, design, app development",
+        "ready-to-grow":"By the best and most modern design and programming methods, you are ready to grow your brand and business.",
+        "order":"Project Order",
+        "moonline-service":"Moonline Services"
+        },
+
     "services":{
         "title": "Our Services",
         "desc": "What do we do ?",
@@ -17,7 +30,24 @@
         "adTitle": "Advertising and Content Production",
         "adDesc": "Being more and better seen is dependent on people's perspective of a business. Do not overlook this point."
     },
+
+    "webapp":{
+        "title": "Web && App Development",
+        "desc": "In the endless and modern world today, most people's needs are met through the internet or online activities. The importance of websites and mobile applications in businesses is undeniable. The path to progress and success in this field is not a coincidence or accident. Our team at Moonline will be your reliable roadmap on this journey."
+    },
+
+    "design":{
+        "title": "Design and Branding",
+        "desc": "Users don't just see, they scan! Beauty doesn't come across with a low-quality and ordinary design. Our team excels in designing and advancing your brand."
+    },
+
+    "advertisement":{
+        "title": "Advertising and Content Creation",
+        "desc": "Users don't just see, they scan! Beauty doesn't come across with a low-quality and ordinary design. Our team excels in designing and advancing your brand."
+    },
+
     "about":{
+        "title": "About Us",
         "pooya":{
             "name":"Pooya Sadri",
             "pro":"Full Stack Developer"
@@ -38,5 +68,26 @@
             "name":"Zahra Kar",
             "pro":"Motion Designer"
         }
+    },
+
+    "contact":{
+        "title": "Contact Us",
+        "desc": {
+        "we": "We",
+        "you": "",
+        "choose-you": "Choose you for collaboration",
+        "contact-us": "Get in touch with us now!"
+        },
+        "name": "Your Name:",
+        "email": "Your Email:",
+        "message": "What services are you looking for?",
+        "send":"SEND"
+    },
+
+    "footer":{
+        "title": "Our Socials Networks",
+        "all-rights": "All rights reserved. powered by",
+        "moonline-team":"Moonline team"
     }
+
 }

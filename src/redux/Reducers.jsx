@@ -8,16 +8,6 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actions.INCREMENT_COUNTER:
-      return {
-        ...state,
-        counter: state.counter + 1,
-      };
-    case actions.DECREMENT_COUNTER:
-      return {
-        ...state,
-        counter: state.counter - 1,
-      };
     case actions.CHANGE_DIR:
       return {
         ...state,
