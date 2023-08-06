@@ -26,19 +26,20 @@ const About = () => {
               type: "loop",
               autoWidth: true,
               focus: "center",
-              perPage: 3,
+              perPage: 4,
+              gap: 5,
               rewind: true,
               pagination: false,
               autoplay: true,
               pauseOnHover: false,
-              resetProgress: false,
+              resetProgress: true,
             }}
             aria-label="About US"
           >
             {data.map(({ img, title, desc, bgColor }, index) => (
               <SplideSlide key={index}>
                 <div className={`flex justify-center `}>
-                  <img className="w-5/6" src={img} alt={title} />
+                  <img className="w-[391px] object-cover h-[391px] rounded-3xl" src={img} alt={title} />
                 </div>
                 <div className="text-center">
                   <h1 className="my-5 text-3xl font-bold text-white">
