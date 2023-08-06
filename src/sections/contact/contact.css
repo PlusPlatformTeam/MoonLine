@@ -1,4 +1,15 @@
 .input-bg{
     border-radius: 26px;
     background: rgba(217, 217, 217, 0.08);
-    backdrop-filter: blur(19.5px);}
+    backdrop-filter: blur(19.5px);
+}
+
+.rtl-btn-position{
+    margin-right: -130px;
+    margin-top: 5px;
+}
+
+.ltr-btn-position{
+    margin-left: -85px;
+    margin-top: 6px;
+}

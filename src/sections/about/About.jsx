@@ -4,16 +4,21 @@ import "@splidejs/react-splide/css";
 import Data from "./data";
 import Icon from "../../assets/images/icon-about.png";
 import "./about.css";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const About = () => {
+  const { t } = useTranslation();
+  const direction = useSelector((state) => state.direction);
   const data = Data();
+  
   return (
     <section id="about" className="w-full gradiant-bottom-light">
       <div className="flex flex-row w-full">
         <div className="w-full mx-12 mt-16">
           <div className="flex flex-row ">
-            <img className="ml-5" src={Icon} alt="icon about us" />
-            <h1 className="mt-3 text-3xl font-bold text-white ">درباره ما </h1>
+            <img className={`${direction==="rtl"?"ml-5":"mr-5"}`} src={Icon} alt="icon about us" />
+            <h1 className="mt-3 text-3xl font-bold text-white ">{t("about.title")}</h1>
           </div>
           <Splide
             dir="ltr"
