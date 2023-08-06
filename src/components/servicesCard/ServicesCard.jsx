@@ -1,10 +1,36 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import "./servicecard.css";
 
 const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => {
+  let refToUse;
+  let href;
+
+  const webappRef = useRef(null);
+  const advertisementRef = useRef(null);
+  const designRef = useRef(null);
+
+
+
+
+  useEffect(() => {
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const targetId = link.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  }, []);
+
   const handleMouseOver = () => {
     handleCardHover(color);
   };
@@ -13,9 +39,28 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => 
     handleCardHover("blue");
   };
 
+
+  if (color === "blue") {
+    refToUse = webappRef;
+    href="#webapp";
+  } else if (color === "yellow") {
+    refToUse = advertisementRef;
+    href="#advertisement";
+  } else {
+    refToUse = designRef;
+    href="#design";
+
+  }
+
+
   return (
     <div className="p-0 px-3 m-0 mb-32 lg:basis-4/12 md:basis-6/12 sm:basis-12/12">
-      <div
+      <a
+        href={href}
+       ref={refToUse}
+        aria-current="page"
+      >
+              <div
         className={`card-container relative text-center opacity-100 text-gray-50 cursor-pointer ${bgColor}`}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
@@ -35,6 +80,8 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => 
           </span>
         </div>
       </div>
+      </a>
+
     </div>
   );
 };
