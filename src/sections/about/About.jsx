@@ -13,7 +13,7 @@ const About = () => {
   const data = Data();
   
   return (
-    <section id="about" className="w-full gradiant-bottom-light">
+    <section dir="rtl" id="about" className="w-full gradiant-bottom-light">
       <div className="flex flex-row w-full">
         <div className="w-full mx-12 mt-16">
           <div className="flex flex-row ">
@@ -26,8 +26,8 @@ const About = () => {
               type: "loop",
               autoWidth: true,
               focus: "center",
-              perPage: 4,
-              gap: 5,
+              perPage: 3,
+              gap: "1rem",
               rewind: true,
               pagination: false,
               autoplay: true,
@@ -39,7 +39,7 @@ const About = () => {
             {data.map(({ img, title, desc, bgColor }, index) => (
               <SplideSlide key={index}>
                 <div className={`flex justify-center `}>
-                  <img className="w-[391px] object-cover h-[391px] rounded-3xl" src={img} alt={title} />
+                  <img className="w-[290px] object-cover h-[290px] rounded-3xl" src={img} alt={title} />
                 </div>
                 <div className="text-center">
                   <h1 className="my-5 text-3xl font-bold text-white">
