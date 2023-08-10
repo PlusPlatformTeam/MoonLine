@@ -1,0 +1,12 @@
+@media (max-width: 768px) { 
+
+    #advertisement{
+      text-align: center;
+      justify-content: center;
+    }
+
+    .title{
+        justify-content: center;
+    }
+
+}
