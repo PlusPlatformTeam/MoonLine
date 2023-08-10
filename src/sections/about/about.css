@@ -1,10 +1,115 @@
 .splide__slide {
-    transform: scale(0.8, 0.8);
-    filter: blur(5px)  grayscale(50%);
+  transform: scale(0.8, 0.8);
+  filter: blur(5px) grayscale(50%);
+}
+
+.splide__slide.is-active {
+  filter: blur(0px) grayscale(0%);
+  transform: scale(0.9, 0.9);
+}
+
+.hovereffect {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 20px;
+  left: 0;
+  z-index: 100;
+}
+
+.hovereffect:hover .overlay {
+  display: block;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  filter: grayscale(50%) blur(3px) brightness(0.7);
+  -webkit-filter: grayscale(50%) blur(3px) brightness(0.7);
+}
+
+.hovereffect a.info {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 15%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  font-weight: bold;
+  text-decoration: none;
+  color: white !important;
+  padding: 7px 14px;
+  border-radius: 8px;
+  background-color: #d9d9d97d;
+  box-shadow: 1px 2px 3px 1px #000000a3;
+}
+
+.hovereffect .overlay img {
+  position: absolute;
+  width: 120px;
+  top: 20%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  z-index: 100;
+  filter: grayscale(0%) blur(0px);
+  -webkit-filter: grayscale(0%) blur(0px);
+  display: inline-block;
+  background-color: transparent;
+}
+
+.hovereffect a.info:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hovereffect a.info,
+.hovereffect .overlay img {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+}
+
+.hovereffect:hover a.info,
+.hovereffect:hover .overlay img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.is-prev .hovereffect .overlay, .is-next .hovereffect .overlay{
+  display: none;
+}
+
+.is-next .hovereffect:hover img, .is-prev .hovereffect:hover img {
+  filter: grayscale(0%) blur(0px) brightness(1);
+  -webkit-filter: grayscale(0%) blur(0px) brightness(1);
+}
+@media (max-width: 400px) {
+  .splide__slide {
+    padding: 0px 150px 0px 0px;
   }
-  
-  .splide__slide.is-active {
-    filter: blur(0px)  grayscale(0%);
-    transform: scale(0.9, 0.9);
-  }
-  
+}

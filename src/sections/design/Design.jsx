@@ -24,7 +24,7 @@ const Design = () => {
 
         <div className="w-full mx-12 mt-16 lg:w-5/12">
           <div className="flex flex-row ">
-            <image
+            <img
               className={`${direction==="rtl"?"ml-8":"mr-8"} w-8 h-8 mt-5 animate-ping`}
               src={Icon}
               alt="icon"
