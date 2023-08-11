@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import ServiceCard from "../../components/servicesCard/ServicesCard";
 import { useSelector } from "react-redux";
 
-function Services() {
+function Services({ animate }) {
   const direction = useSelector((state) => state.direction);
   const [headerBgColor, setHeaderBgColor] = useState("blue");
   const { t } = useTranslation();
@@ -32,13 +32,18 @@ function Services() {
         <p className="mt-4 text-gray-400">{t("services.desc")}</p>
       </header>
       <div className="flex flex-row flex-wrap justify-between w-full mt-16 sm:justify-center lg:justify-between md:justify-between">
-        {data.map((item, index) => (
-          <ServiceCard
-            key={index}
-            {...item}
-            handleCardHover={handleCardHover}
-          />
-        ))}
+        {data.map((item, index) => {
+          const delay = (index + 1) * 1000;
+
+          return (
+            <ServiceCard
+              key={index}
+              {...item}
+              delay={delay}
+              handleCardHover={handleCardHover}
+            />
+          );
+        })}
       </div>
     </section>
   );
