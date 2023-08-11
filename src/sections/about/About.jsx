@@ -51,7 +51,7 @@ const About = () => {
             {data.map(({ img, title, desc, bgColor }, index) => (
               <SplideSlide className="overflow-hidden min-h-[390px]" key={index}>
                 <div className="flex justify-center hovereffect overflow-hidden">
-                  <div class="overlay">
+                  <div className="overlay">
                     <img src={Logo} alt="Moonline logo" />
                     <a style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" href="#vds">
                       {t("about.seeMore")}

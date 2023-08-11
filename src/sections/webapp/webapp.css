@@ -1,3 +1,11 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 
 .device-container{
@@ -7,17 +15,29 @@
 }
 
 
-.spin{
+.spin {
   position: absolute;
+  top: 50%; /* Adjust the vertical position as needed */
+  left: 50%; /* Adjust the horizontal position as needed */
+  transform: translate(-50%, -50%); /* Center the spinner */
   animation: spin 5s linear infinite;
+}
+
+.ltr-position{
+  left: auto;
+  margin-left: 100px;
 
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) { 
+
+  #webapp{
+    text-align: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  
+  
 }
+
+

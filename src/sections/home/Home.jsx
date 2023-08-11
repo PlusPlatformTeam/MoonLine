@@ -32,11 +32,12 @@ const Home = () => {
   }, []);
 
   return (
+    
     <section id="home" className="bg-img">
-      <div className="flex flex-row w-full">
-        <div className="w-full lg:w-5/12">
+      <div className={`flex flex-col  w-full flex-col-reverse md:flex-row`} >
+        <div className="w-full md:w-5/12">
           <div className="relative block w-full">
-            <h2 className="mx-12 mt-16 text-3xl font-bold text-white">
+            <h2 className="mx-12 md:mt-16 text-2xl md:text-3xl font-bold text-white">
               {t("home.modern-design")}{" "}
               <span className="relative text-5xl font-bold blue-base-color">
                 {t("moonline")}
@@ -45,27 +46,27 @@ const Home = () => {
                   alt="moonline underline"
                   className={`absolute left-1 ${
                     direction === "rtl" ? "top-20" : "top-16"
-                  } hidden md:block`}
+                  } `}
                 />
               </span>
             </h2>
           </div>
-          <h2 className="mx-12 mt-20 text-xl font-normal text-white">
+          <h2 className="mx-12 mt-16 md:mt-20 text-xl font-normal text-white">
             {t("home.moonline-team-service")}&nbsp;
             <span className="blue-base-color">{t("home.team-service")}</span>
             &nbsp;{t("home.ready-to-grow")}
           </h2>
 
-          <div className="flex flex-row w-full mx-12 mt-16 mb-2">
+          <div className="flex flex-row w-full md:mx-12 mt-16 mb-2 btn-container">
           
-              <button class="relative bg-btn_color hover:bg-blue-500 rounded-full w-48 ">
+              <button className="relative bg-btn_color hover:bg-blue-500 rounded-full w-48 ">
               <a  
               href="#contact"
               ref={contactRef}
               aria-current="page"
               >
                 <div className="flex justify-end">
-                  <p className="items-center mt-1 ml-2 text-white">
+                  <p className="items-center md:-mt-[1px] mt-1 ml-2 text-sm md:text-lg font-semibold text-white">
                     {t("home.order")}
                   </p>
                   <img
@@ -81,7 +82,7 @@ const Home = () => {
         
 
             <button
-              class={`p-4 relative ${
+              className={`p-4 relative ${
                 direction === "ltr" ? "pr-3 ml-5" : "pl-6 w-48"
               }  mr-4 bg-transparent items-center rounded-full border border-blue-400 hover:bg-blue-500 rounded-ful`}
             >
@@ -92,7 +93,7 @@ const Home = () => {
               >
 
               <div className="flex justify-end">
-                <p className="items-center ml-2 -mt-1 text-white">
+                <p className="items-center ml-2 md:-mt-1 text-xs font-semibold md:text-lg text-white">
                   {t("home.moonline-service")}
                 </p>
                 <img
@@ -108,8 +109,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="justify-center hidden w-7/12 lg:block text-end ">
-          <img className="w-full p-16 " src={Cards} alt="home cards" />
+        <div className="justify-center md:w-7/12 text-end ">
+          <img className="w-full p-5 md:px-1 md:py-20 lg:p-16 xl:p-16 " src={Cards} alt="home cards" />
         </div>
       </div>
     </section>

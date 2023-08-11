@@ -13,33 +13,51 @@ const WebApp = () => {
   const direction = useSelector((state) => state.direction);
 
   return (
-    <section id="webapp" className="w-full h-screen gradiant-top-light">
-      <div className="flex flex-row w-full">
-        <div className="w-full mx-12 mt-16 lg:w-5/12">
-          <div className="flex flex-row ">
-            <img className={`ml-5 ${direction==="ltr"?"rotate-180":""}`} src={OpenTag} alt="icon " />
-            <h1 className={`text-white font-bold  mt-3 ${direction==="ltr"?"text-3xl":"text-4xl"} `}>
+    <section id="webapp" className="w-full md:h-screen gradiant-top-light">
+      <div className="flex flex-col-reverse w-full md:flex-row">
+        <div className="w-full px-3 md:mx-12 md:mt-16 mt-96 md:w-5/12">
+          <div className="flex flex-row -mt-10 md:mt-0">
+            <img
+              className={`ml-5 ${
+                direction === "ltr" ? "rotate-180" : ""
+              } h-10 md:h-16`}
+              src={OpenTag}
+              alt="icon "
+            />
+            <h1
+              className={`text-white font-bold  mt-3 px-8 md:px-0 ${
+                direction === "ltr"
+                  ? "text-lg md:text-3xl"
+                  : "text-lg md:text-4xl"
+              } `}
+            >
               {t("webapp.title")}
             </h1>
-            <img className={`mr-5 ${direction==="ltr"?"rotate-180":""}`} src={closeTag} alt="icon " />
+            <img
+              className={`mr-5 ${
+                direction === "ltr" ? "rotate-180" : ""
+              } h-10 md:h-16`}
+              src={closeTag}
+              alt="icon "
+            />
           </div>
-          <p className="mt-12 text-xl font-normal text-white">
+          <p className="mt-12 text-xl font-normal text-white p-8 md:p-8">
             {t("webapp.desc")}
           </p>
           <Button
-            myClass="hover:bg-blue-500 bg-custom-blue"
+            myClass="hover:bg-blue-500 bg-custom-blue mt-16 mb-10 md:mt-20 md:mb-0"
             text={t("view-more")}
           />
         </div>
 
-        <div className="relative z-0 justify-center hidden w-7/12 lg:block text-end">
+        <div className="relative z-0 justify-center -mt-20 md:-mt-16 md:w-7/12 md:text-end ">
           <img
-            className="absolute z-0 w-full p-20 mb-16 ellipse"
+            className="absolute  z-0 w-[1200px] md:w-[1000px] p-20 mb-16 ellipse"
             src={Devices}
             alt="home cards"
           />
           <img
-            className="absolute w-full mb-16 p-14 spin"
+            className={`absolute w-56 mt-28  md:w-[650px] ${direction==="rtl"?"right-24 -top-2 md:right-28 md:-mt-48 md:top-72":" ltr-position md:-mt-44 ml-24 md:ml-20"} spin`} 
             src={Balls}
             alt="balls"
           />
