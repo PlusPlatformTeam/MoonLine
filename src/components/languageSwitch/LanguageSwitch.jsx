@@ -22,7 +22,7 @@ const LanguageSwitch = () => {
         onChange={handleToggle}
       />
 
-      <label for="switch" data-language={language === "FA" ? "FA" : "EN"}>
+      <label htmlFor="switch" data-language={language === "FA" ? "FA" : "EN"}>
         <div className="flex flex-row justify-between mx-2 mt-2 font-bold lang-txt">
           <h1>FA</h1>
           <h1>EN</h1>

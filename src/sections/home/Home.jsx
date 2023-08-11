@@ -32,6 +32,7 @@ const Home = () => {
   }, []);
 
   return (
+    
     <section id="home" className="bg-img">
       <div className={`flex flex-col  w-full flex-col-reverse md:flex-row`} >
         <div className="w-full md:w-5/12">
@@ -58,7 +59,7 @@ const Home = () => {
 
           <div className="flex flex-row w-full md:mx-12 mt-16 mb-2 btn-container">
           
-              <button class="relative bg-btn_color hover:bg-blue-500 rounded-full w-48 ">
+              <button className="relative bg-btn_color hover:bg-blue-500 rounded-full w-48 ">
               <a  
               href="#contact"
               ref={contactRef}
@@ -81,7 +82,7 @@ const Home = () => {
         
 
             <button
-              class={`p-4 relative ${
+              className={`p-4 relative ${
                 direction === "ltr" ? "pr-3 ml-5" : "pl-6 w-48"
               }  mr-4 bg-transparent items-center rounded-full border border-blue-400 hover:bg-blue-500 rounded-ful`}
             >

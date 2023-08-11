@@ -5,6 +5,11 @@
   font-style: normal;
 }
 
+html{
+  scroll-behavior: smooth !important;
+
+}
+
 .scroll::-webkit-scrollbar{
   width: 12px;
   height: 12px;
@@ -44,7 +49,9 @@ border-radius: 10px !important;
 }
 
 
+
 body {
+  scroll-behavior: smooth !important;
   overflow-x: hidden;
   overflow-y:scroll;
   font-family: 'iranSans', sans-serif;

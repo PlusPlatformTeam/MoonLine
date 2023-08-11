@@ -1,17 +1,11 @@
-#floating__nav>div {
+#floating__nav {
     display: none;
 }
 
-/* .active-scroll-spy {
-    background-color: yellowgreen;
-    border-radius: 15px;
-  } */
-
 /* MEDIA QUERIES (tablets and phones */
 @media screen and (max-width: 1024px) {
-    #floating__nav>div {
-        background-color: #0c3255;
-        border-radius: 20px;
+    #floating__nav {
+       
         padding: 8px;
         display: flex;
         align-items: center;
@@ -34,6 +28,7 @@
         }
     }
 
+
     .scrollspy {
         display: flex;
         gap: 1rem;
@@ -43,7 +38,7 @@
         backdrop-filter: blur(20px);
     }
 
-    #floating__nav>div a {
+    #floating__nav a {
         padding: 0.6rem;
         border-radius: 50%;
         font-size: 1.3rem;
@@ -52,6 +47,6 @@
     }
 
     #floating__nav li.active a {
-        background: var(--color-primary);
+        background: #1C5F99;
     }
 }

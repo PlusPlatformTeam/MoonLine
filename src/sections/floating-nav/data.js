@@ -7,9 +7,9 @@ import {AiFillMessage} from 'react-icons/ai'
 
 const data = [
     {id: 1, link: '#home', icon: <AiFillHome/>},
-    {id: 2, link: '#about', icon: <BsPersonFill/>},
-    {id: 3, link: '#services', icon: <MdHomeRepairService/>},
-    {id: 4, link: '#webapp', icon: <AiFillAppstore/>},
+    {id: 2, link: '#services', icon: <MdHomeRepairService/>},
+    {id: 3, link: '#webapp', icon: <AiFillAppstore/>},
+    {id: 4, link: '#about', icon: <BsPersonFill/>},
     {id: 5, link: '#contact', icon: <AiFillMessage/>}
 ]
 
