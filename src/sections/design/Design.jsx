@@ -10,36 +10,40 @@ const Design = () => {
   const { t } = useTranslation();
   const direction = useSelector((state) => state.direction);
 
-
   return (
     <section id="design" className="w-full h-screen gradiant-bottom-light">
-      <div className="flex flex-row w-full">
-        <div className="relative left-0 justify-center hidden w-7/12 lg:block ">
+      <div className="md:flex block md:flex-row w-full">
+        <div className="relative left-0 md:w-7/12 ">
           <img
-            className={`absolute w-full py-14 pl-16 ${direction==="ltr"?"transform scale-x-[-1]":""} `}
+            className={`cards absolute w-full md:py-2 md:pl-16 ${
+              direction === "ltr" ? "transform scale-x-[-1]" : ""
+            } `}
             src={Cards}
             alt="home cards"
           />
         </div>
 
-        <div className="w-full mx-12 mt-16 lg:w-5/12">
+        <div className="w-full sm:py-24 px-8 md:mx-12 mx-auto pt-96 sm:pt-96 md-px-0 md:mt-10 md:pt-0 md:w-5/12">
           <div className="flex flex-row ">
+           
+            <h1 className="mt-3 md:text-4xl title text-3xl font-bold text-white relative">
             <img
-              className={`${direction==="rtl"?"ml-8":"mr-8"} w-8 h-8 mt-5 animate-ping`}
+              className={`md:w-8 w-5 md:h-8 h-5 mt-2  md:mt-1 animate-ping absolute ${
+                direction === "rtl" ? "-right-9 md:-right-14" : "-left-9 md:-left-14"
+              }`}
               src={Icon}
               alt="icon"
             />
-            <h1 className="mt-3 text-4xl font-bold text-white ">
-                {t("design.title")}{" "}
+              {t("design.title")}{" "}
             </h1>
           </div>
           <p className="mt-12 text-xl font-normal text-white">
-          {t("design.desc")}
+            {t("design.desc")}
           </p>
 
           <Button
-            myClass="hover:bg-green-800 bg-custom-green"
-            text=  {t("view-more")}
+            myClass="hover:bg-green-800 bg-custom-green "
+            text={t("view-more")}
           />
         </div>
       </div>

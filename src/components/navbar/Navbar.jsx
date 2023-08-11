@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from "react";
 import Logo from "../../assets/images/navLogo.png";
 import "./navbar.css";
 import LanguageSwitch from "../languageSwitch/LanguageSwitch";
@@ -7,27 +6,7 @@ import { useTranslation } from "react-i18next";
 const Navbar = ({ changeLanguage, handleDirChange }) => {
   const { t } = useTranslation();
 
-  const aboutRef = useRef(null);
-  const webappRef = useRef(null);
-  const servicesRef = useRef(null);
-  const contactRef = useRef(null);
 
-  useEffect(() => {
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const targetId = link.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
-
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-  }, []);
 
   return (
     <nav dir="rtl" className="w-full bg-black border-gray-200 overflow-hidden">
@@ -49,7 +28,6 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
           <li>
             <a
               href="#services"
-              ref={servicesRef}
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
@@ -59,7 +37,6 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
           <li>
             <a
               href="#webapp"
-              ref={webappRef}
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
@@ -69,7 +46,6 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
           <li>
             <a
               href="#contact"
-              ref={contactRef}
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
@@ -79,7 +55,6 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
           <li>
             <a
               href="#about"
-              ref={aboutRef}
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >

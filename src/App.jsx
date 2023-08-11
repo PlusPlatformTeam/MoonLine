@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Home from "./sections/home/Home";
 import StartUp from "./sections/startup/StartUp";
 import Advertisement from "./sections/advertisement/Advertisement";
+import FloatingNav from "./sections/floating-nav/FloatingNav";
 import WebApp from "./sections/webapp/WebApp";
 import Design from "./sections/design/Design";
 import Service from "./sections/services/Service";
@@ -18,6 +19,39 @@ import 'aos/dist/aos.css';
 const App = () => {
   const direction = useSelector((state) => state.direction);
   const lang = useSelector((state) => state.lng);
+  const mainRef = useRef();
+  const [showFloatingNav, setShowFloatingNav] = useState(true);
+  const [siteYPostion, setSiteYPosition] = useState(0);
+
+  const showFloatingNavHandler = () => {
+    setShowFloatingNav(true);
+  };
+
+  const hideFloatingNavHandler = () => {
+    setShowFloatingNav(false);
+  };
+
+  const floatingNavToggleHandler = () => {
+    // check if we scrolled up or down at least 20px
+    if (
+      siteYPostion < mainRef?.current?.getBoundingClientRect().y - 20 ||
+      siteYPostion > mainRef?.current?.getBoundingClientRect().y + 20
+    ) {
+      showFloatingNavHandler();
+    } else {
+      hideFloatingNavHandler();
+    }
+
+    setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
+    console.log("showFloatingNav:", showFloatingNav); // Add this line to check the value of showFloatingNav
+  };
+
+  useEffect(() => {
+    const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
+
+    // cleanup function
+    return () => clearInterval(checkYPosition);
+  }, [siteYPostion]);
 
   const [isLoading, setIsLoading] = useState(true);
   const { t, i18n } = useTranslation();
@@ -55,7 +89,7 @@ const App = () => {
   }, [lang, direction, i18n])
 
   return (
-    <main dir={dir}>
+    <main dir={dir} ref={mainRef}>
       {isLoading ? <StartUp /> : null}
       <Navbar />
       <Home />
@@ -66,6 +100,7 @@ const App = () => {
       <About animate="fade-up"/>
       <Contact />
       <Footer />
+      {showFloatingNav && <FloatingNav />}
     </main>
   );
 };

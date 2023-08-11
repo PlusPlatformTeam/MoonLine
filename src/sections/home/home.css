@@ -8,3 +8,15 @@
 .bg-btn_color{
   background-color: #0C2E4E;
 }
+
+@media (max-width: 768px) { 
+
+#home{
+  text-align: center;
+}
+.btn-container{
+  justify-content: center;
+}
+
+
+ }
