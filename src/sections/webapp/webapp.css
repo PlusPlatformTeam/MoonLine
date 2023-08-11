@@ -7,6 +7,7 @@
   }
 }
 
+
 .device-container{
   position: relative;
   z-index: 1;
@@ -14,9 +15,17 @@
 }
 
 
-.spin{
+.spin {
   position: absolute;
+  top: 50%; /* Adjust the vertical position as needed */
+  left: 50%; /* Adjust the horizontal position as needed */
+  transform: translate(-50%, -50%); /* Center the spinner */
   animation: spin 5s linear infinite;
+}
+
+.ltr-position{
+  left: auto;
+  margin-left: 100px;
 
 }
 
@@ -24,6 +33,7 @@
 
   #webapp{
     text-align: center;
+    align-items: center;
   }
   
   

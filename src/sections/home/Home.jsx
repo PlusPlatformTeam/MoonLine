@@ -65,7 +65,7 @@ const Home = () => {
               aria-current="page"
               >
                 <div className="flex justify-end">
-                  <p className="items-center mt-1 ml-2 text-white">
+                  <p className="items-center md:-mt-[1px] mt-1 ml-2 text-sm md:text-lg font-semibold text-white">
                     {t("home.order")}
                   </p>
                   <img
@@ -92,7 +92,7 @@ const Home = () => {
               >
 
               <div className="flex justify-end">
-                <p className="items-center ml-2 -mt-1 text-white">
+                <p className="items-center ml-2 md:-mt-1 text-xs font-semibold md:text-lg text-white">
                   {t("home.moonline-service")}
                 </p>
                 <img

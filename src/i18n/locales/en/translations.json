@@ -48,6 +48,7 @@
 
     "about":{
         "title": "About Us",
+        "seeMore" : "See More",
         "pooya":{
             "name":"Pooya Sadri",
             "pro":"Full Stack Developer"
