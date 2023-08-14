@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import ServiceCard from "../../components/servicesCard/ServicesCard";
 import { useSelector } from "react-redux";
 
-function Services({ animate }) {
+function Services() {
   const direction = useSelector((state) => state.direction);
   const [headerBgColor, setHeaderBgColor] = useState("blue");
   const { t } = useTranslation();

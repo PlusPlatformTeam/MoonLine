@@ -2,13 +2,10 @@ import React from "react";
 import "./footer.css";
 import data from "./data";
 import Logo from "../../assets/images/footer-image.png";
-import DotedBg from "../../assets/images/doted-bg.png";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
 
 const Footer = () => {
   const { t } = useTranslation();
-  const direction = useSelector((state) => state.direction);
 
   return (
     <section className="w-full overflow-hidden ">

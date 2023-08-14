@@ -93,11 +93,11 @@ const App = () => {
       {isLoading ? <StartUp /> : null}
       <Navbar />
       <Home />
-      <Service animate="fade-up"/>
+      <Service />
       <WebApp />
       <Design />
       <Advertisement />
-      <About animate="fade-up"/>
+      <About />
       <Contact />
       <Footer />
       {showFloatingNav && <FloatingNav />}
