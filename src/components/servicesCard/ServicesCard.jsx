@@ -1,20 +1,19 @@
 import React,{useRef,useEffect} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
 
 import "./servicecard.css";
 
-const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => {
+const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover, delay }) => {
   let refToUse;
   let href;
-
+  
+  const direction = useSelector((state) => state.direction);
   const webappRef = useRef(null);
   const advertisementRef = useRef(null);
   const designRef = useRef(null);
-
-
-
-
+  
   useEffect(() => {
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((link) => {
@@ -39,7 +38,6 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => 
     handleCardHover("blue");
   };
 
-
   if (color === "blue") {
     refToUse = webappRef;
     href="#webapp";
@@ -51,16 +49,17 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => 
     href="#design";
 
   }
-
-
+  const alignAnimate = direction === 'ltr' ? 'left' : 'left';
   return (
-    <div className="p-0 px-3 m-0 mb-32 lg:basis-4/12 md:basis-6/12 sm:basis-12/12">
+    <div data-aos={`fade-${alignAnimate}`} data-aos-duration={delay}  className="p-0 px-3 m-0 mb-32 lg:basis-4/12 md:basis-6/12 sm:basis-12/12">
       <a
+      data-aos={`fade-${alignAnimate}`} data-aos-duration={delay} 
         href={href}
        ref={refToUse}
         aria-current="page"
       >
-              <div
+      <div
+        data-aos={`fade-${alignAnimate}`} data-aos-duration={delay} 
         className={`card-container relative text-center opacity-100 text-gray-50 cursor-pointer ${bgColor}`}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
@@ -81,7 +80,6 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover }) => 
         </div>
       </div>
       </a>
-
     </div>
   );
 };

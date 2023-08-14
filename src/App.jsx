@@ -13,6 +13,8 @@ import Navbar from "./components/navbar/Navbar";
 import "./i18n/config";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const App = () => {
   const direction = useSelector((state) => state.direction);
@@ -58,7 +60,7 @@ const App = () => {
   useEffect(() => {
     i18n.changeLanguage(lang);
     setDir(direction);
-  }, [lang, direction]);
+  }, [lang, direction, i18n]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -75,6 +77,16 @@ const App = () => {
       document.body.style.overflowY = "auto";
     }
   }, [isLoading]);
+
+  useEffect(() => {
+    AOS.init({
+      duration : 3000
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [lang, direction, i18n])
 
   return (
     <main dir={dir} ref={mainRef}>

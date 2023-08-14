@@ -108,7 +108,7 @@
   filter: grayscale(0%) blur(0px) brightness(1);
   -webkit-filter: grayscale(0%) blur(0px) brightness(1);
 }
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .splide__slide {
     padding: 0px 150px 0px 0px;
   }

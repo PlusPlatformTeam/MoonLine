@@ -17,17 +17,17 @@ const About = () => {
     <section
       dir="rtl"
       id="about"
-      className="w-full gradiant-bottom-light h-screen overflow-x-hidden"
+      className="w-full h-screen overflow-x-hidden gradiant-bottom-light"
     >
       <div className="flex flex-row w-full overflow-x-hidden">
         <div className="w-full mt-16 overflow-x-hidden">
-          <div className={`lg:mx-12 md:mx-6 m-0 overflow-x-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
+          <div className={`lg:mx-12 md:mx-6 mx-3 overflow-x-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
             <img
               className={`${direction === "rtl" ? "ml-5" : "mr-5"}`}
               src={Icon}
               alt="icon about us"
             />
-            <h1 className="mt-3 mx-4 text-3xl font-bold text-white ">
+            <h1 className="mx-4 mt-3 text-3xl font-bold text-white ">
               {t("about.title")}
             </h1>
           </div>
