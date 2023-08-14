@@ -13,8 +13,9 @@ import Navbar from "./components/navbar/Navbar";
 import "./i18n/config";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import FloatButton from "./components/floatButton/FloatButton";
 
 const App = () => {
   const direction = useSelector((state) => state.direction);
@@ -31,8 +32,9 @@ const App = () => {
     setShowFloatingNav(false);
   };
 
+ 
+
   const floatingNavToggleHandler = () => {
-    // check if we scrolled up or down at least 20px
     if (
       siteYPostion < mainRef?.current?.getBoundingClientRect().y - 20 ||
       siteYPostion > mainRef?.current?.getBoundingClientRect().y + 20
@@ -43,13 +45,12 @@ const App = () => {
     }
 
     setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
-    console.log("showFloatingNav:", showFloatingNav); // Add this line to check the value of showFloatingNav
   };
+
+
 
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
-
-    // cleanup function
     return () => clearInterval(checkYPosition);
   }, [siteYPostion]);
 
@@ -80,13 +81,13 @@ const App = () => {
 
   useEffect(() => {
     AOS.init({
-      duration : 3000
+      duration: 3000,
     });
   }, []);
 
   useEffect(() => {
     AOS.refresh();
-  }, [lang, direction, i18n])
+  }, [lang, direction, i18n]);
 
   return (
     <main dir={dir} ref={mainRef}>
@@ -101,6 +102,7 @@ const App = () => {
       <Contact />
       <Footer />
       {showFloatingNav && <FloatingNav />}
+      <FloatButton />
     </main>
   );
 };

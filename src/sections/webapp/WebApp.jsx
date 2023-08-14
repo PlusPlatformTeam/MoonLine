@@ -15,7 +15,10 @@ const WebApp = () => {
   return (
     <section id="webapp" className="w-full md:h-screen gradiant-top-light">
       <div className="flex flex-col-reverse w-full md:flex-row">
-        <div className="w-full px-3 md:mx-12 md:mt-16 mt-96 md:w-5/12">
+        <div className="w-full px-3 md:mx-12 md:mt-16 mt-96 md:w-5/12" 
+         data-aos={`fade-down`} data-aos-duration={1500} 
+        
+         >
           <div className="flex flex-row -mt-10 md:mt-0">
             <img
               className={`ml-5 ${
@@ -56,11 +59,11 @@ const WebApp = () => {
             src={Devices}
             alt="home cards"
           />
-          <img
+          {/* <img
             className={`absolute w-56 mt-28  md:w-[650px] ${direction==="rtl"?"right-24 -top-2 md:right-28 md:-mt-48 md:top-72":" ltr-position md:-mt-44 ml-24 md:ml-20"} spin`} 
             src={Balls}
             alt="balls"
-          />
+          /> */}
         </div>
       </div>
     </section>

@@ -6,29 +6,12 @@ import { useSelector } from "react-redux";
 import "./servicecard.css";
 
 const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover, delay }) => {
-  let refToUse;
   let href;
   
   const direction = useSelector((state) => state.direction);
-  const webappRef = useRef(null);
-  const advertisementRef = useRef(null);
-  const designRef = useRef(null);
+
   
-  useEffect(() => {
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const targetId = link.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
-
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-  }, []);
+  
 
   const handleMouseOver = () => {
     handleCardHover(color);
@@ -39,13 +22,10 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover, delay
   };
 
   if (color === "blue") {
-    refToUse = webappRef;
     href="#webapp";
   } else if (color === "yellow") {
-    refToUse = advertisementRef;
     href="#advertisement";
   } else {
-    refToUse = designRef;
     href="#design";
 
   }
@@ -55,7 +35,6 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover, delay
       <a
       data-aos={`fade-${alignAnimate}`} data-aos-duration={delay} 
         href={href}
-       ref={refToUse}
         aria-current="page"
       >
       <div

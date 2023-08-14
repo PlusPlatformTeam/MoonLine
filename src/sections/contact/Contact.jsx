@@ -14,7 +14,8 @@ const Contact = () => {
       className=" w-full flex h-screen gradiant-top-light text-center justify-center"
     >
       <div className="w-full lg:w-9/12 p-4 lg:p-16 ">
-        <h1 className="text-white font-bold text-3xl">{t("contact.title")}</h1>
+        <div data-aos={`fade-down`} data-aos-duration={1000}>
+           <h1 className="text-white font-bold text-3xl">{t("contact.title")}</h1>
         <h1 className="text-white font-normal text-lg my-5">
           {t("contact.desc.we")}{" "}
           <span className="blue-base-color">{t("contact.desc.you")}</span>{" "}
@@ -22,8 +23,12 @@ const Contact = () => {
           <br className="mt-1" />
           {t("contact.desc.contact-us")}{" "}
         </h1>
+        </div>
+       
 
-        <div className="mb-6">
+<div data-aos={`fade-down`} data-aos-duration={1000}>
+
+   <div className="mb-6">
           <input
             type="text"
             placeholder={t("contact.name")}
@@ -53,6 +58,9 @@ const Contact = () => {
        
           </div>
         </div>
+</div>
+
+       
       </div>
     </section>
   );

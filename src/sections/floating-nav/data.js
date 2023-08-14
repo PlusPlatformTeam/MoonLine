@@ -6,7 +6,7 @@ import {AiFillMessage} from 'react-icons/ai'
 
 
 const data = [
-    {id: 1, link: '#home', icon: <AiFillHome/>},
+    {id: 1, link: '#navbar', icon: <AiFillHome/>},
     {id: 2, link: '#services', icon: <MdHomeRepairService/>},
     {id: 3, link: '#webapp', icon: <AiFillAppstore/>},
     {id: 4, link: '#about', icon: <BsPersonFill/>},
