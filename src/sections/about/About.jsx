@@ -32,7 +32,7 @@ const About = () => {
             </h1>
           </div>
           <Splide
-            className="overflow-hidden"
+            className="overflow-hidden mt-20"
             dir="ltr"
             options={{
               type: "loop",

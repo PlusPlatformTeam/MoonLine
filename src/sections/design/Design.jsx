@@ -13,7 +13,7 @@ const Design = () => {
   return (
     <section id="design" className="w-full h-screen gradiant-bottom-light">
       <div className="md:flex block md:flex-row w-full">
-        <div className="relative left-0 md:w-7/12 ">
+        <div className="relative left-0 md:w-7/12 " data-aos={`fade-down`} data-aos-duration={1500} >
           <img
             className={`cards absolute w-full md:py-2 md:pl-16 ${
               direction === "ltr" ? "transform scale-x-[-1]" : ""
@@ -23,7 +23,7 @@ const Design = () => {
           />
         </div>
 
-        <div className="w-full sm:py-24 px-8 md:mx-12 mx-auto pt-96 sm:pt-96 md-px-0 md:mt-10 md:pt-0 md:w-5/12">
+        <div className="w-full sm:py-24 px-8 md:mx-12 mx-auto pt-96 sm:pt-96 md-px-0 md:mt-10 md:pt-0 md:w-5/12"  data-aos={`fade-down`} data-aos-duration={1500}>
           <div className="flex flex-row ">
            
             <h1 className="mt-3 md:text-4xl title text-3xl font-bold text-white relative">

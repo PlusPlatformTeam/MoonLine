@@ -9,7 +9,7 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
 
 
   return (
-    <nav dir="rtl" className="w-full bg-black border-gray-200 overflow-hidden">
+    <nav id="navbar" dir="rtl" className="w-full bg-black border-gray-200 overflow-hidden">
       <div className="flex flex-wrap items-center justify-between w-full px-8 py-4 ">
         <a href="https://flowbite.com/" className="flex items-center">
           <img src={Logo} className="h-8 mr-3" alt="Flowbite Logo" />
@@ -49,7 +49,7 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
               className="block px-2 py-1 transition rounded-xl delay-400"
               aria-current="page"
             >
-              {t("navbar.home")}
+              {t("navbar.contact")}
             </a>
           </li>
           <li>

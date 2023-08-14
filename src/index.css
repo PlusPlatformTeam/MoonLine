@@ -76,6 +76,7 @@ body {
   background-size: cover;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -91,4 +92,10 @@ code {
 
 .bg-semi-transparent-yellow{
   background-color: rgba(203, 191, 1, 0.33);
+}
+
+@media (max-width: 1016px) {
+  .floatBtn {
+    display: none;
+  }
 }
