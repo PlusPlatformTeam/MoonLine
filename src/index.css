@@ -1,13 +1,14 @@
 @font-face {
   font-family: 'iranSans';
   src: url('./assets/fonts/iranSans/IRANSans-web.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+}
+
+*,html,body{
+  font-family: 'iranSans' !important;
 }
 
 html{
   scroll-behavior: smooth !important;
-
 }
 
 .scroll::-webkit-scrollbar{
