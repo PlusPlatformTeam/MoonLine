@@ -13,7 +13,7 @@ const Advertisement = () => {
   return (
     <section id="advertisement" className="w-full h-screen gradiant-top-light">
       <div className="flex flex-col-reverse md:flex-row w-full">
-        <div className="w-full md:mx-12 -mt-16 md:mt-16 md:w-7/12 lg:w-5/12 mx-auto md:p-0 p-8">
+        <div className="w-full md:mx-12 -mt-16 md:mt-16 md:w-7/12 lg:w-5/12 mx-auto md:p-0 p-8" data-aos={`fade-down`} data-aos-duration={1500}>
           <div className="flex flex-row  title">
             <h1 className="mt-3 md:text-3xl text-xl font-bold text-white relative">
               <img
@@ -35,7 +35,7 @@ const Advertisement = () => {
             text={t("view-more")}
           />
         </div>
-        <div className="justify-center md:p-0 md:w-5/12 lg:w-7/12 w-full md:text-end">
+        <div className="justify-center md:p-0 md:w-5/12 lg:w-7/12 w-full md:text-end" data-aos={`fade-down`} data-aos-duration={1500}>
           <img className=" p-5 mx-auto md:mx-0" src={Cards} alt="home cards" />
         </div>
       </div>
