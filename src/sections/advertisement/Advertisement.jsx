@@ -26,7 +26,7 @@ const Advertisement = () => {
               {t("advertisement.title")}
             </h1>
           </div>
-          <p className="mt-12 text-xl font-normal text-white">
+          <p className="mt-12 text-xl font-normal text-white leading-10" style={{ whiteSpace: 'pre-line' }}>
             {t("advertisement.desc")}
           </p>
 

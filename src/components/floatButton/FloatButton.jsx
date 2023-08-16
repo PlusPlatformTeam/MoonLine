@@ -6,7 +6,7 @@ const FloatButton = () => {
   const direction = useSelector((state) => state.direction);
 
   return (
-    <a href="#navbar" className="floatBtn">
+    <a href="#navbar" className="floatBtn" >
       <div
         className={`h-12 w-12 bg-[#1F5A8A] rounded-full sticky  ${
           direction === "rtl" ? "right-10" : "left-10"

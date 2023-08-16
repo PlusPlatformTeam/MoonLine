@@ -11,6 +11,8 @@ html{
   scroll-behavior: smooth !important;
 }
 
+
+
 .scroll::-webkit-scrollbar{
   width: 12px;
   height: 12px;
