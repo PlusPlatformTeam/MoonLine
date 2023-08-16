@@ -2,5 +2,23 @@
       .nav-list{
           display: none !important;
       }
-      
+}
+
+.nav-bar ul, .nav-bar ul li{
+    transition: all 0.8s;
+}
+
+.nav-bar ul li{
+    border-bottom: 3px solid transparent;   
+}
+
+.nav-bar ul:hover li{
+    opacity: 0.8;
+    filter: blur(2px);
+} 
+
+.nav-bar ul li:hover{
+    opacity: 1;
+    filter: blur(0px);
+    border-bottom: 3px solid #114579;
 }
