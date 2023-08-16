@@ -17,11 +17,11 @@ const About = () => {
     <section
       dir="rtl"
       id="about"
-      className="w-full h-screen overflow-x-hidden gradiant-bottom-light"
+      className="w-full h-full overflow-hidden gradiant-bottom-light"
     >
-      <div className="flex flex-row w-full overflow-x-hidden">
+      <div className="flex flex-row w-full overflow-hidden">
         <div className="w-full mt-16 overflow-x-hidden">
-          <div className={`lg:mx-12 md:mx-6 mx-3 overflow-x-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
+          <div className={`lg:mx-12 md:mx-6 mx-3 overflow-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
             <img
               className={`${direction === "rtl" ? "ml-5" : "mr-5"}`}
               src={Icon}
@@ -32,7 +32,7 @@ const About = () => {
             </h1>
           </div>
           <Splide
-            className="overflow-hidden mt-20"
+            className="mt-20 overflow-hidden"
             dir="ltr"
             options={{
               type: "loop",
@@ -43,14 +43,14 @@ const About = () => {
               rewind: true,
               pagination: false,
               autoplay: true,
-              pauseOnHover: false,
+              pauseOnHover: true,
               resetProgress: true,
             }}
             aria-label="About US"
           >
             {data.map(({ img, title, desc, bgColor }, index) => (
-              <SplideSlide className="overflow-hidden min-h-[390px]" key={index}>
-                <div className="flex justify-center hovereffect overflow-hidden">
+              <SplideSlide className="overflow-hidden min-h-[490px]" key={index}>
+                <div className="flex justify-center overflow-hidden hovereffect">
                   <div className="overlay">
                     <img src={Logo} alt="Moonline logo" />
                     <a style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" href="#vds">
@@ -58,12 +58,12 @@ const About = () => {
                     </a>
                   </div>
                   <img
-                    className="w-[290px] object-cover h-[290px] rounded-3xl"
+                    className="w-[300px] object-cover h-[300px] rounded-3xl mb-4"
                     src={img}
                     alt={title}
                   />
                 </div>
-                <div className="text-center">
+                <div className="mt-5 text-center">
                   <h1 className="my-5 text-3xl font-bold text-white">
                     {title}
                   </h1>
