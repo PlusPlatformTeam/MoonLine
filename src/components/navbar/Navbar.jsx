@@ -9,7 +9,7 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
 
 
   return (
-    <nav dir="rtl" className="w-full overflow-hidden bg-black border-gray-200 nav-bar">
+    <nav id="navbar" dir="rtl" className="w-full overflow-hidden bg-black border-gray-200 nav-bar">
       <div className="flex flex-wrap items-center justify-between w-full px-8 py-4 ">
         <a href="https://flowbite.com/" className="flex items-center">
           <img src={Logo} className="h-8 mr-3" alt="Flowbite Logo" />

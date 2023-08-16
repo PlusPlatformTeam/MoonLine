@@ -1,11 +1,21 @@
 .splide__slide {
-  transform: scale(0.8, 0.8);
+  transform: scale(0.8);
   filter: blur(5px) grayscale(50%);
 }
 
 .splide__slide.is-active {
   filter: blur(0px) grayscale(0%);
-  transform: scale(0.9, 0.9);
+  transform: scale(0.9);
+}
+
+.splide__slide.is-prev {
+  filter: blur(1.8px) grayscale(25%);
+  transform: scale(0.83);
+}
+
+.splide__slide.is-next {
+  filter: blur(1.8px) grayscale(25%);
+  transform: scale(0.83);
 }
 
 .hovereffect {
@@ -18,7 +28,6 @@
 }
 
 .hovereffect .overlay {
-  /* display: none; */
   width: 100%;
   height: 100%;
   position: absolute;
@@ -48,7 +57,7 @@
 .hovereffect a.info {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   position: absolute;
-  bottom: 15%;
+  bottom: 22%;
   left: 30%;
   transform: translate(-50%, -50%);
   transform-origin: top left;
@@ -58,13 +67,13 @@
   padding: 7px 14px;
   border-radius: 8px;
   background-color: #d9d9d97d;
-  box-shadow: 1px 2px 3px 1px #000000a3;
+  box-shadow: 1px 2px 7px 1px #000000a3;
 }
 
 .hovereffect .overlay img {
   position: absolute;
   width: 120px;
-  top: 20%;
+  top: 13%;
   left: 32%;
   transform: translate(-50%, -50%);
   transform-origin: top left;
@@ -110,6 +119,6 @@
 }
 @media (max-width: 415px) {
   .splide__slide {
-    padding: 0px 150px 0px 0px;
+    padding: 0px 135px 0px 0px;
   }
 }
