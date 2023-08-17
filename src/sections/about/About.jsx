@@ -21,7 +21,7 @@ const About = () => {
     >
       <div className="flex flex-row w-full overflow-hidden">
         <div className="w-full mt-16 overflow-x-hidden">
-          <div className={`lg:mx-12 md:mx-6 mx-3 overflow-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
+          <div className={`lg:mx-12 mt-16 md:mx-6 mx-3 overflow-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
             <img
               className={`${direction === "rtl" ? "ml-5" : "mr-5"}`}
               src={Icon}

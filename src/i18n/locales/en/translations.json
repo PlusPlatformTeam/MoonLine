@@ -17,7 +17,7 @@
         "team-service":"Website design, design, app development",
         "ready-to-grow":"By the best and most modern design and programming methods, you are ready to grow your brand and business.",
         "order":"Project Order",
-        "moonline-service":"Moonline Services"
+        "moonline-service":"Our Services"
         },
 
     "services":{
@@ -33,17 +33,16 @@
 
     "webapp":{
         "title": "Web && App Development",
-        "desc": "In the endless and modern world today, most people's needs are met through the internet or online activities. The importance of websites and mobile applications in businesses is undeniable. The path to progress and success in this field is not a coincidence or accident. Our team at Moonline will be your reliable roadmap on this journey."
-    },
+        "desc": "In the endless and modern world today, most people's needs are met through the internet or online activities.\nThe importance of websites and mobile applications in businesses is undeniable.\nThe path to progress and success in this field is not a coincidence or accident.\nOur team at Moonline will be your reliable roadmap on this journey."    },
 
     "design":{
         "title": "Design and Branding",
-        "desc": "Users don't just see, they scan! Beauty doesn't come across with a low-quality and ordinary design. Our team excels in designing and advancing your brand."
+        "desc": "Users don't just see, they scan!\nBeauty doesn't come across with a low-quality and ordinary design.\nOur team excels in designing and advancing your brand."
     },
 
     "advertisement":{
         "title": "Advertising and Content Creation",
-        "desc": "Users don't just see, they scan! Beauty doesn't come across with a low-quality and ordinary design. Our team excels in designing and advancing your brand."
+        "desc": "Attracting customers and generating more visits is achieved through a unique advertisement.\nOn the other hand, your social networks will represent your brand.\nThe Moonline team excels in gathering experienced and creative individuals.\n"
     },
 
     "about":{

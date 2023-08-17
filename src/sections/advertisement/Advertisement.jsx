@@ -15,18 +15,16 @@ const Advertisement = () => {
       <div className="flex flex-col-reverse md:flex-row w-full">
         <div className="w-full md:mx-12 -mt-16 md:mt-16 md:w-7/12 lg:w-5/12 mx-auto md:p-0 p-8" data-aos={`fade-down`} data-aos-duration={1500}>
           <div className="flex flex-row  title">
-            <h1 className="mt-3 md:text-3xl text-xl font-bold text-white relative">
+            <h1 className="flex flex-row mt-3 md:text-3xl text-xl font-bold text-white relative">
               <img
-                className={`absolute ${
-                  direction === "rtl" ? "md:-left-12 -left-10" : "md:-right-12 -right-10"
-                } w-8 md:w-10 -mt-1 md:mt-0`}
+                className={`w-5 h-5 md:w-10 md:h-10 ${direction==="rtl"?"ml-3":"mr-3 md:-mt-1"}`}
                 src={Icon}
                 alt="icon"
               />
               {t("advertisement.title")}
             </h1>
           </div>
-          <p className="mt-12 text-xl font-normal text-white">
+          <p className="mt-12 text-xl font-normal text-white leading-10" style={{ whiteSpace: 'pre-line' }}>
             {t("advertisement.desc")}
           </p>
 

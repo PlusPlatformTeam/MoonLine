@@ -16,7 +16,7 @@ const Contact = () => {
       <div className="w-full lg:w-9/12 p-4 lg:p-16 ">
         <div data-aos={`fade-down`} data-aos-duration={1000}>
            <h1 className="text-white font-bold text-3xl">{t("contact.title")}</h1>
-        <h1 className="text-white font-normal text-lg my-5">
+        <h1 className="text-white font-normal text-lg my-5 leading-10">
           {t("contact.desc.we")}{" "}
           <span className="blue-base-color">{t("contact.desc.you")}</span>{" "}
           {t("contact.desc.choose-you")}
