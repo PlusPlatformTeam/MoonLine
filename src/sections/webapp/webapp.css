@@ -10,6 +10,16 @@
     }
   }
 
+
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
   .deviceCard{
     width: 22rem;
     height: 22rem;
@@ -19,6 +29,12 @@
     width: 6rem;
     top: 10rem;
     left: 10rem;
+  }
+
+  .blue-ball-position{
+    width: 6rem;
+    top: 11rem;
+    right: 5rem;
   }
 
 
@@ -34,6 +50,15 @@
     }
   }
 
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(170px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(170px) rotate(-360deg);
+    }
+  }
+
   .deviceCard{
     width: 27rem;
     height: 27rem;
@@ -43,6 +68,12 @@
     width: 6rem;
     top: 13rem;
     left: 13rem;
+  }
+
+  .blue-ball-position{
+    width: 6rem;
+    top: 16rem;
+    right: 6.5rem;
   }
 
 
@@ -59,6 +90,15 @@
     }
   }
 
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
   .deviceCard{
     width: 32rem;
     height: 32rem;
@@ -67,6 +107,12 @@
     width: 9rem;
     top: 16rem;
     left: 16rem;
+  }
+
+  .blue-ball-position{
+    width: 9rem;
+    top: 21rem;
+    right: 7rem;
   }
 
 }
@@ -81,6 +127,15 @@
     }
   }
 
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+
   .deviceCard{
     width: 36rem;
     height: 36rem;
@@ -89,6 +144,11 @@
     width: 10rem;
     top: 20rem;
     left: 17rem;
+  }
+  .blue-ball-position{
+    width: 10rem;
+    top: 15rem;
+    right: 6rem;
   }
 
 
@@ -104,6 +164,15 @@
     }
   }
 
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+
   .deviceCard{
     width: 40rem;
     height: 40rem;
@@ -113,6 +182,12 @@
     width: 12rem;
     top: 23rem;
     left: 20rem;
+  }
+
+  .blue-ball-position{
+    width: 12rem;
+    top: 16rem;
+    right: 12rem;
   }
 
 
@@ -151,6 +226,11 @@
 
 .spin {
   animation: orbit 5s linear infinite;
+  transform-origin: center center;
+}
+
+.blue-spin {
+  animation: orbit-blue 5s linear infinite;
   transform-origin: center center;
 }
 

@@ -60,12 +60,12 @@ const Home = () => {
             <button className="relative bg-btn_color hover:bg-blue-500 rounded-full w-52 ">
               <a href="#contact" ref={contactRef} aria-current="page">
                 <div className="flex justify-end">
-                  <p className="items-center md:-mt-[1px] mt-1 ml-5 md:ml-5 text-xs md:text-lg font-semibold text-white">
+                  <p className="items-center md:-mt-[1px] mt-2 ml-5 md:ml-5 text-xs md:text-lg font-semibold text-white">
                     {t("home.order")}
                   </p>
                   <img
                     className={`h-8 opacity-50 ${
-                      direction === "ltr" ? "rotate-180 ml-2 mr-2" : ""
+                      direction === "ltr" ? "rotate-180 ml-2 mr-2 " : ""
                     }`}
                     src={DobleArrow}
                     alt="left arrow"
@@ -75,22 +75,21 @@ const Home = () => {
             </button>
 
             <button
-              className={`p-4 relative ${
-                direction === "ltr" ? "pr-3 ml-5" : "pl-6 w-52"
+              className={`p-4 relative w-52 ${direction==="ltr"?"ml-2":""}
               }  mr-4 bg-transparent items-center rounded-full border border-blue-400 hover:bg-blue-500 rounded-ful`}
             >
               <a href="#webapp" ref={webappRef} aria-current="page">
                 <div className="flex justify-end">
                   <p
-                    className={`items-center ml-2 md:-mt-1 text-xs font-semibold md:text-lg text-white ${
-                      direction === "rtl" ? "" : ""
+                    className={`items-center  md:-mt-1 text-xs font-semibold md:text-lg text-white ${
+                      direction === "rtl" ? "ml-2" : "mr-4"
                     }`}
                   >
                     {t("home.moonline-service")}
                   </p>
                   <img
                     className={`h-5 ${
-                      direction === "ltr" ? "rotate-180 ml-3" : ""
+                      direction === "ltr" ? "rotate-180 ml-3" : "ml-1"
                     }`}
                     src={LeftArrowService}
                     alt="left arrow"

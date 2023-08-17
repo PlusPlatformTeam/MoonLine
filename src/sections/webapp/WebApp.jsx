@@ -30,10 +30,10 @@ const WebApp = () => {
               alt="icon "
             />
             <h1
-              className={`text-white font-bold  mt-3 px-5 lg:px-5  ${
+              className={`text-white font-bold  mt-3 md:mt-2 lg:mt-4  px-5 lg:px-5  ${
                 direction === "ltr"
-                  ? "text-md lg:text-3xl"
-                  : "text-md lg:text-3xl"
+                  ? "text-md lg:text-1xl xl:text-2xl"
+                  : "text-md lg:text-1xl xl:text-2xl"
               } `}
             >
               {t("webapp.title")}
@@ -50,7 +50,7 @@ const WebApp = () => {
             {t("webapp.desc")}
           </p>
           <Button
-            myClass="hover:bg-blue-500 bg-custom-blue mt-16 mb-10 lg:mt-20 lg:mb-0"
+            myClass="hover:bg-blue-500 bg-custom-blue mt-16 mb-10 lg:ml-7 lg:mt-20 lg:mb-0"
             text={t("view-more")}
           />
         </div>
@@ -63,7 +63,7 @@ const WebApp = () => {
             alt="balls"
           />
              <img
-            className={`absolute white-ball-position spin`}
+            className={`absolute blue-ball-position blue-spin`}
             src={BlueBall}
             alt="balls"
           />
