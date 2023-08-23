@@ -34,7 +34,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="bg-img section">
+    <section id="home" className= {`section ${direction==="rtl"?"bg-img-rtl":"bg-img-ltr"} bg-setting`}>
       <div className={`flex  w-full flex-col-reverse md:flex-row`}>
         <div className="w-full md:w-5/12">
           <div className="relative block w-full">

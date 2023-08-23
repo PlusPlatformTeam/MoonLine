@@ -1,34 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./startup.css";
 import Logo from "../../assets/images/logo-startup.png";
 import Light from "../../assets/images/light-startup.png";
 
-// import langData from "../../lang/lang-fa";
-
 const StartUp = () => {
-  const [importClass, setImportClass] = useState("");
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setImportClass("startup-out");
-    }, 2000);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
   return (
-    <section
-      className={`bg-image  z-50 ${importClass} absolute w-screen section`}
-    >
+    <section className={`bg-image z-50 absolute w-screen section`}>
       <header className="flex flex-row text-center justify-center items-center h-screen">
         <div className="relative">
           <img
-            className="absolute -top-20 animate-pulse"
+            className="absolute -top-20 animate-pulse phoneScreen"
             src={Light}
             alt="Light"
           />
 
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" className="phoneScreen" />
         </div>
       </header>
     </section>

@@ -1,6 +1,13 @@
-.bg-img {
+.bg-img-rtl {
   background-image: url("../../assets/images/bgHome.png");
-  background-size: cover;
+}
+
+.bg-img-ltr {
+  background-image: url("../../assets/images/bgHomeLtr.png");
+}
+
+.bg-setting{
+    background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }

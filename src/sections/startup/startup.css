@@ -1,9 +1,9 @@
 .bg-image {
-    background-image: url("../../assets/images/bgStartUp.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-
-  }
+  background-image: url("../../assets/images/bgStartUp.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
   body{
     overflow-y: hidden ;
@@ -16,6 +16,16 @@
 
   .startup-out {
     animation: slide-out 1s ease-out;
+  }
+
+
+  @media (max-width: 576px) {
+
+    .phoneScreen{
+      width: 350px;
+     
+    }
+
   }
   
   @keyframes slide-out {
