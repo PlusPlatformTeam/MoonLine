@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./home.css";
 import Cards from "../../assets/images/homeCards.png";
+import EnCards from "../../assets/images/homeCardsLtr.png";
+
 import DobleArrow from "../../assets/images/left-doble-arrow.png";
 import LeftArrowService from "../../assets/images/left-arrow-service.png";
 import UnderLine from "../../assets/images/underLine.png";
@@ -32,7 +34,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="bg-img">
+    <section id="home" className= {`section ${direction==="rtl"?"bg-img-rtl":"bg-img-ltr"} bg-setting`}>
       <div className={`flex  w-full flex-col-reverse md:flex-row`}>
         <div className="w-full md:w-5/12">
           <div className="relative block w-full">
@@ -103,7 +105,7 @@ const Home = () => {
         <div className="justify-center md:w-7/12 text-end ">
           <img
             className="w-full p-5 md:px-1 md:py-20 lg:p-16 xl:p-16 "
-            src={Cards}
+            src={direction==="rtl"?Cards:EnCards}
             alt="home cards"
           />
         </div>

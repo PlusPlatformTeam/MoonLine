@@ -14,7 +14,7 @@ function Services() {
 
   const data = Data();
   return (
-    <section id="services" className="pt-8 gradiant-bottom-light h-100">
+    <section id="services" className="pt-8 gradiant-bottom-light  section">
       <header className="text-center">
         <div
           className={`relative inline-block ${

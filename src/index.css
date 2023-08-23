@@ -11,7 +11,11 @@ html{
   scroll-behavior: smooth !important;
 }
 
-
+.section {
+  flex: 1;
+  min-height: 100vh; /* Set a minimum height to fill the viewport */
+  position: relative; /* Required for absolute items within sections */
+}
 
 .scroll::-webkit-scrollbar{
   width: 12px;

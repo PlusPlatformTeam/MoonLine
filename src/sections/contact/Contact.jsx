@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className=" w-full flex h-screen gradiant-top-light text-center justify-center"
+      className=" w-full flex section gradiant-top-light text-center justify-center"
     >
       <div className="w-full lg:w-9/12 p-4 lg:p-16 ">
         <div data-aos={`fade-down`} data-aos-duration={1000}>

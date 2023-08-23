@@ -11,7 +11,7 @@ const Advertisement = () => {
   const direction = useSelector((state) => state.direction);
 
   return (
-    <section id="advertisement" className="w-full h-screen gradiant-top-light">
+    <section id="advertisement" className="w-full section gradiant-top-light">
       <div className="flex flex-col-reverse md:flex-row w-full">
         <div className="w-full md:mx-12 -mt-16 md:mt-16 md:w-7/12 lg:w-5/12 mx-auto md:p-0 p-8" data-aos={`fade-down`} data-aos-duration={1500}>
           <div className="flex flex-row  title">

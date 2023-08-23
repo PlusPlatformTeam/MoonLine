@@ -32,8 +32,6 @@ const App = () => {
     setShowFloatingNav(false);
   };
 
- 
-
   const floatingNavToggleHandler = () => {
     if (
       siteYPostion < mainRef?.current?.getBoundingClientRect().y - 20 ||
@@ -46,8 +44,6 @@ const App = () => {
 
     setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
   };
-
-
 
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
@@ -66,7 +62,7 @@ const App = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -91,18 +87,23 @@ const App = () => {
 
   return (
     <main dir={dir} ref={mainRef}>
-      {isLoading ? <StartUp /> : null}
-      <Navbar />
-      <Home />
-      <Service />
-      <WebApp />
-      <Design />
-      <Advertisement />
-      <About />
-      <Contact />
-      <Footer />
-      {showFloatingNav && <FloatingNav />}
-      <FloatButton />
+      {isLoading ? (
+        <StartUp />
+      ) : (
+        <>
+          <Navbar />
+          <Home />
+          <Service />
+          <WebApp />
+          <Design />
+          <Advertisement />
+          <About />
+          <Contact />
+          <Footer />
+          {showFloatingNav && <FloatingNav />}
+          <FloatButton />
+        </>
+      )}
     </main>
   );
 };
