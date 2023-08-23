@@ -18,7 +18,7 @@ const StartUp = () => {
 
   return (
     <section
-      className={`bg-image h-screen z-50 ${importClass} absolute w-screen `}
+      className={`bg-image  z-50 ${importClass} absolute w-screen section`}
     >
       <header className="flex flex-row text-center justify-center items-center h-screen">
         <div className="relative">

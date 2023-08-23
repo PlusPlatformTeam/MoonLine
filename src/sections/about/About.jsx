@@ -17,7 +17,7 @@ const About = () => {
     <section
       dir="rtl"
       id="about"
-      className="w-full h-full overflow-hidden gradiant-bottom-light"
+      className="w-full overflow-hidden gradiant-bottom-light section"
     >
       <div className="flex flex-row w-full overflow-hidden">
         <div className="w-full mt-16 overflow-x-hidden">
