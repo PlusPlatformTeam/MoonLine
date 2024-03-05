@@ -1,10 +1,237 @@
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+
+
+@media (max-width: 576px) {
+  @keyframes orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(120px) rotate(-360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(150px) rotate(-360deg);
+    }
   }
+
+  .deviceCard{
+    width: 22rem;
+    height: 22rem;
+  }
+
+  .white-ball-position{
+    width: 6rem;
+    top: 10rem;
+    left: 12rem;
+  }
+
+  .blue-ball-position{
+    width: 6rem;
+    top: 11rem;
+    right: 3.8rem;
+  }
+
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  @keyframes orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(140px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(140px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(170px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(170px) rotate(-360deg);
+    }
+  }
+
+  .deviceCard{
+    width: 27rem;
+    height: 27rem;
+  }
+
+  .white-ball-position{
+    width: 6rem;
+    top: 13rem;
+    left: 13rem;
+  }
+
+  .blue-ball-position{
+    width: 6rem;
+    top: 16rem;
+    right: 6.5rem;
+  }
+
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  @keyframes orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(170px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(170px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(150px) rotate(-360deg);
+    }
+  }
+
+  .deviceCard{
+    width: 32rem;
+    height: 32rem;
+  }
+  .white-ball-position{
+    width: 9rem;
+    top: 16rem;
+    left: 16rem;
+  }
+
+  .blue-ball-position{
+    width: 9rem;
+    top: 21rem;
+    right: 7rem;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  @keyframes orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(210px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(210px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+
+  .deviceCard{
+    width: 36rem;
+    height: 36rem;
+  }
+  .white-ball-position{
+    width: 10rem;
+    top: 20rem;
+    left: 17rem;
+  }
+  .blue-ball-position{
+    width: 10rem;
+    top: 15rem;
+    right: 6rem;
+  }
+
+
+}
+
+@media (min-width: 1281px) {
+  @keyframes orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit-blue {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(200px) rotate(-360deg);
+    }
+  }
+
+  .deviceCard{
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .white-ball-position{
+    width: 12rem;
+    top: 23rem;
+    left: 20rem;
+  }
+
+  .blue-ball-position{
+    width: 12rem;
+    top: 16rem;
+    right: 12rem;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.device-image{
+  background-image: url("../../assets/images/device-webapp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.spin {
+  animation: orbit 5s linear infinite;
+  transform-origin: center center;
+}
+
+.blue-spin {
+  animation: orbit-blue 5s linear infinite;
+  transform-origin: center center;
 }
 
 
@@ -15,13 +242,7 @@
 }
 
 
-.spin {
-  position: absolute;
-  top: 50%; /* Adjust the vertical position as needed */
-  left: 50%; /* Adjust the horizontal position as needed */
-  transform: translate(-50%, -50%); /* Center the spinner */
-  animation: spin 5s linear infinite;
-}
+
 
 .ltr-position{
   left: auto;

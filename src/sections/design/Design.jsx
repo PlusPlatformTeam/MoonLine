@@ -11,7 +11,7 @@ const Design = () => {
   const direction = useSelector((state) => state.direction);
 
   return (
-    <section id="design" className="w-full h-screen gradiant-bottom-light">
+    <section id="design" className="w-full section gradiant-bottom-light">
       <div className="md:flex block md:flex-row w-full">
         <div className="relative left-0 md:w-7/12 " data-aos={`fade-down`} data-aos-duration={1500} >
           <img
@@ -37,7 +37,7 @@ const Design = () => {
               {t("design.title")}{" "}
             </h1>
           </div>
-          <p className="mt-12 text-xl font-normal text-white">
+          <p className="mt-12 text-xl font-normal text-white leading-10" style={{ whiteSpace: 'pre-line' }}>
             {t("design.desc")}
           </p>
 

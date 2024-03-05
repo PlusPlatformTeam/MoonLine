@@ -23,7 +23,7 @@ input[type="checkbox"] {
     content: attr(data-language);
     color: #fff;
     font-weight: bold;
-    padding-top:3px;
+    padding-top:5px;
     text-align: center;
     justify-content:center;
     width: 32px;

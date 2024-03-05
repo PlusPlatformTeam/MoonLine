@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./sections/home/Home";
 import StartUp from "./sections/startup/StartUp";
 import Advertisement from "./sections/advertisement/Advertisement";
@@ -32,8 +33,6 @@ const App = () => {
     setShowFloatingNav(false);
   };
 
- 
-
   const floatingNavToggleHandler = () => {
     if (
       siteYPostion < mainRef?.current?.getBoundingClientRect().y - 20 ||
@@ -46,8 +45,6 @@ const App = () => {
 
     setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
   };
-
-
 
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
@@ -66,7 +63,7 @@ const App = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -90,20 +87,36 @@ const App = () => {
   }, [lang, direction, i18n]);
 
   return (
-    <main dir={dir} ref={mainRef}>
-      {isLoading ? <StartUp /> : null}
-      <Navbar />
-      <Home />
-      <Service />
-      <WebApp />
-      <Design />
-      <Advertisement />
-      <About />
-      <Contact />
-      <Footer />
-      {showFloatingNav && <FloatingNav />}
-      <FloatButton />
+
+
+<BrowserRouter dir={dir} ref={mainRef}>
+<Routes>
+  <Route index element={
+      <main dir={dir} ref={mainRef}>
+      {isLoading ? (
+        <StartUp />
+      ) : (
+        <>
+          <Navbar />
+          <Home />
+          <Service />
+          <WebApp />
+          <Design />
+          <Advertisement />
+          <About />
+          <Contact />
+          <Footer />
+          {showFloatingNav && <FloatingNav />}
+          <FloatButton />
+        </>
+      )}
     </main>
+  } />
+  <Route path="/blogs" element={<Home />} />
+
+  
+</Routes>
+</BrowserRouter>
   );
 };
 

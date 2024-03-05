@@ -1,6 +1,9 @@
 import React from "react";
 import "./contact.css";
 import Btn from "../../assets/images/btn-send-text.png";
+import BtnLtr from "../../assets/images/btn-send-text-ltr.png";
+
+
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
@@ -11,12 +14,12 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className=" w-full flex h-screen gradiant-top-light text-center justify-center"
+      className=" w-full flex section gradiant-top-light text-center justify-center"
     >
       <div className="w-full lg:w-9/12 p-4 lg:p-16 ">
         <div data-aos={`fade-down`} data-aos-duration={1000}>
            <h1 className="text-white font-bold text-3xl">{t("contact.title")}</h1>
-        <h1 className="text-white font-normal text-lg my-5">
+        <h1 className="text-white font-normal text-lg my-5 leading-10">
           {t("contact.desc.we")}{" "}
           <span className="blue-base-color">{t("contact.desc.you")}</span>{" "}
           {t("contact.desc.choose-you")}
@@ -52,8 +55,8 @@ const Contact = () => {
           ></textarea>
           <div className="absolute -bottom-5 w-full flex justify-center text-center ">
             <div className="relative flex float w-36  cursor-pointer hover:scale-x-90">
-                   <img src={Btn} alt="btn" className="h-12 w-full " />
-                   <h1 className={`text-white font-bold  ${direction==="rtl"?"rtl-btn-position text-xl":"ltr-btn-position text-2xl"}`}>{t("contact.send")}</h1>
+                   <img src={ direction==="rtl"?Btn:BtnLtr} alt="btn" className="h-12 w-full " />
+                   <h1 className={`text-white font-bold  ${direction==="rtl"?"rtl-btn-position text-lg":"ltr-btn-position text-2xl"}`}>{t("contact.send")}</h1>
             </div>
        
           </div>

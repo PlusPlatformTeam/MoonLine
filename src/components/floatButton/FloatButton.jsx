@@ -5,16 +5,23 @@ import { useSelector } from "react-redux";
 const FloatButton = () => {
   const direction = useSelector((state) => state.direction);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    document.querySelector("#navbar").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <a href="#navbar" className="floatBtn">
-      <div
-        className={`h-12 w-12 bg-[#1F5A8A] rounded-full sticky  ${
-          direction === "rtl" ? "right-10" : "left-10"
-        } bottom-10 animate-bounce cursor-pointer flex items-center justify-center`}
-      >
-        <FaArrowUp className="text-white h-24" />
-      </div>
-    </a>
+    <div
+      className={`floatBtn ${
+        direction === "rtl" ? "right-10" : "left-10"
+      } bottom-10 animate-bounce cursor-pointer fixed`}
+    >
+      <a href="#navbar" onClick={handleClick}>
+        <div className="h-12 w-12 bg-[#1F5A8A] rounded-full sticky flex items-center justify-center">
+          <FaArrowUp className="text-white h-6" />
+        </div>
+      </a>
+    </div>
   );
 };
 

@@ -1,8 +1,12 @@
+
+
 @media (max-width: 768px) { 
 
     #design{
       text-align: center;
       justify-content: center;
+      overflow-x: hidden !important;
+
     }
 
     .cards{

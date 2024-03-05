@@ -14,7 +14,7 @@ function Services() {
 
   const data = Data();
   return (
-    <section id="services" className="pt-8 gradiant-bottom-light h-100">
+    <section id="services" className="pt-8 gradiant-bottom-light  section">
       <header className="text-center">
         <div
           className={`relative inline-block ${
@@ -23,7 +23,7 @@ function Services() {
         >
           <p
             id="bg-services-header"
-            className={`absolute margin-auto justify-center text-center right-0 w-48 rounded-sm h-7 bg-semi-transparent-${headerBgColor}`}
+            className={`absolute margin-auto justify-center text-center mr-3 right-0 w-48 rounded-sm h-7 bg-semi-transparent-${headerBgColor}`}
           ></p>
           <span className="relative text-4xl text-gray-50 z-2">
             {t("services.title")}

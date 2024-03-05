@@ -11,6 +11,12 @@ html{
   scroll-behavior: smooth !important;
 }
 
+.section {
+  flex: 1;
+  min-height: 100vh; 
+  position: relative; 
+}
+
 .scroll::-webkit-scrollbar{
   width: 12px;
   height: 12px;
@@ -93,6 +99,10 @@ code {
 
 .bg-semi-transparent-yellow{
   background-color: rgba(203, 191, 1, 0.33);
+}
+
+.floatBtn {
+  overflow: hidden ;
 }
 
 @media (max-width: 1016px) {
