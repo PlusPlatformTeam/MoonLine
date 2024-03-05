@@ -52,7 +52,7 @@ const App = () => {
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
     return () => clearInterval(checkYPosition);
-  }, [siteYPostion]);
+  });
 
   const [isLoading, setIsLoading] = useState(true);
   const { t, i18n } = useTranslation();
