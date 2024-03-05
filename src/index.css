@@ -13,8 +13,8 @@ html{
 
 .section {
   flex: 1;
-  min-height: 100vh; /* Set a minimum height to fill the viewport */
-  position: relative; /* Required for absolute items within sections */
+  min-height: 100vh; 
+  position: relative; 
 }
 
 .scroll::-webkit-scrollbar{
@@ -99,6 +99,10 @@ code {
 
 .bg-semi-transparent-yellow{
   background-color: rgba(203, 191, 1, 0.33);
+}
+
+.floatBtn {
+  overflow: hidden ;
 }
 
 @media (max-width: 1016px) {

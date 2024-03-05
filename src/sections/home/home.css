@@ -25,5 +25,22 @@
   justify-content: center;
 }
 
+.bg-img-ltr{
+  background-image: url("../../assets/images/bg-phone-home.png");
+}
 
+.bg-img-rtl{
+  background-image: url("../../assets/images/bg-phone-home.png");
+}
  }
+
+
+ @media (min-width: 300px) and (max-width: 400px) {
+  .size-text{
+    font-size: larger;
+  }
+}
+
+
+
+

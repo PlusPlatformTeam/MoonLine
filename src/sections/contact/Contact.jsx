@@ -1,6 +1,9 @@
 import React from "react";
 import "./contact.css";
 import Btn from "../../assets/images/btn-send-text.png";
+import BtnLtr from "../../assets/images/btn-send-text-ltr.png";
+
+
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
@@ -52,8 +55,8 @@ const Contact = () => {
           ></textarea>
           <div className="absolute -bottom-5 w-full flex justify-center text-center ">
             <div className="relative flex float w-36  cursor-pointer hover:scale-x-90">
-                   <img src={Btn} alt="btn" className="h-12 w-full " />
-                   <h1 className={`text-white font-bold  ${direction==="rtl"?"rtl-btn-position text-xl":"ltr-btn-position text-2xl"}`}>{t("contact.send")}</h1>
+                   <img src={ direction==="rtl"?Btn:BtnLtr} alt="btn" className="h-12 w-full " />
+                   <h1 className={`text-white font-bold  ${direction==="rtl"?"rtl-btn-position text-lg":"ltr-btn-position text-2xl"}`}>{t("contact.send")}</h1>
             </div>
        
           </div>
