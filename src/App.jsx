@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./sections/home/Home";
 import StartUp from "./sections/startup/StartUp";
 import Advertisement from "./sections/advertisement/Advertisement";
@@ -86,7 +87,12 @@ const App = () => {
   }, [lang, direction, i18n]);
 
   return (
-    <main dir={dir} ref={mainRef}>
+
+
+<BrowserRouter dir={dir} ref={mainRef}>
+<Routes>
+  <Route index element={
+      <main dir={dir} ref={mainRef}>
       {isLoading ? (
         <StartUp />
       ) : (
@@ -105,6 +111,12 @@ const App = () => {
         </>
       )}
     </main>
+  } />
+  <Route path="/blogs" element={<Home />} />
+
+  
+</Routes>
+</BrowserRouter>
   );
 };
 
