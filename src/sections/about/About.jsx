@@ -7,6 +7,7 @@ import Logo from "../../assets/images/logo-about.png";
 import "./about.css";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const { t } = useTranslation();
@@ -53,9 +54,9 @@ const About = () => {
                 <div className="flex justify-center overflow-hidden hovereffect">
                   <div className="overlay">
                     <img src={Logo} alt="Moonline logo" />
-                    <a style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" href="#vds">
+                    <Link style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" to={`profile?name=${title}`}>
                       {t("about.seeMore")}
-                    </a>
+                    </Link>
                   </div>
                   <img
                     className="w-[300px] object-cover h-[300px] rounded-3xl mb-4"
