@@ -15,7 +15,7 @@ const WebApp = () => {
   const direction = useSelector((state) => state.direction);
 
   return (
-    <section id="webapp" className="w-full lg:h-screen gradiant-top-light">
+    <section id="webapp" className="w-full gradiant-top-light">
       <div className="flex flex-col-reverse w-full lg:flex-row">
         <div
           className="z-0 w-full px-3 mt-24 lg:mx-12 lg:mt-16 lg:w-5/12"
@@ -24,6 +24,7 @@ const WebApp = () => {
         >
           <div className="flex flex-row justify-center -mt-10 lg:mt-0 lg:justify-start">
             <img
+              loading="lazy"
               className={`ml-5 ${
                 direction === "ltr" ? "rotate-180" : ""
               } h-10 lg:h-16`}
@@ -40,6 +41,7 @@ const WebApp = () => {
               {t("webapp.title")}
             </h1>
             <img
+              loading="lazy"
               className={`mr-5 ${
                 direction === "ltr" ? "rotate-180" : ""
               } h-10 lg:h-16`}
@@ -50,7 +52,7 @@ const WebApp = () => {
           <p className="p-8 mt-12 text-xl font-normal leading-10 text-white lg:p-8">
             {t("webapp.desc")}
           </p>
-          <Link to='resume'>
+          <Link to='resume?category=develpment'>
             <Button
               myClass="hover:bg-blue-500 bg-custom-blue mt-16 mb-10 lg:ml-7 lg:mt-20 lg:mb-0"
               text={t("view-more")}
@@ -61,11 +63,13 @@ const WebApp = () => {
         <div className="flex justify-center p-5 -mt-24 text-center lg:-mt-16 lg:w-7/12 ">
           <div className="relative z-20 justify-center mt-20 text-center device-image lg:-left-68 lg:mt-24 deviceCard">
           <img
+            loading="lazy"
             className={`absolute white-ball-position spin`}
             src={WhiteBall}
             alt="balls"
           />
-             <img
+          <img
+            loading="lazy"
             className={`absolute blue-ball-position blue-spin`}
             src={BlueBall}
             alt="balls"

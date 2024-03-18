@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="flex flex-row flex-wrap justify-center w-full mt-16 text-center ">
             {data.map((item, index) => (
               <a href={item.click} key={index}>
-                <img src={item.logo} className="h-12 md:mr-10 mr-5" alt={item.logo}/>
+                <img loading="lazy" src={item.logo} className="h-12 md:mr-10 mr-5" alt={item.logo}/>
               </a>
             ))}
           </div> 
@@ -40,6 +40,7 @@ const Footer = () => {
           src={Logo}
           alt="footer logo"
           className="absolute left-0 hidden h-80 md:block "
+          loading="lazy"
         />
       </div>
     </section>

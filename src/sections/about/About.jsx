@@ -24,6 +24,7 @@ const About = () => {
         <div className="w-full -mt-10 overflow-x-hidden">
           <div className={`lg:mx-12 mt-16 md:mx-6 mx-3 overflow-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
             <img
+              loading="lazy"
               className={`${direction === "rtl" ? "ml-2" : "mr-2"}`}
               src={Icon}
               alt="icon about us"
@@ -53,7 +54,7 @@ const About = () => {
               <SplideSlide className="overflow-hidden min-h-[490px]" key={index}>
                 <div className="flex justify-center overflow-hidden hovereffect">
                   <div className="overlay">
-                    <img src={Logo} alt="Moonline logo" />
+                    <img loading="lazy" src={Logo} alt="Moonline logo" />
                     <Link style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" to={`profile?name=${title}`}>
                       {t("about.seeMore")}
                     </Link>
@@ -62,6 +63,7 @@ const About = () => {
                     className="w-[300px] object-cover h-[300px] rounded-3xl mb-4"
                     src={img}
                     alt={title}
+                    loading="lazy"
                   />
                 </div>
                 <div className="mt-5 text-center">

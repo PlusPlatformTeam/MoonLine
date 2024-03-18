@@ -18,6 +18,7 @@ const Advertisement = () => {
           <div className="flex flex-row title">
             <h1 className="relative flex flex-row mt-3 text-xl font-bold text-white md:text-3xl">
               <img
+                loading="lazy"
                 className={`w-5 h-5 md:w-10 md:h-10 ${direction==="rtl"?"ml-3":"mr-3 md:-mt-1"}`}
                 src={Icon}
                 alt="icon"
@@ -29,7 +30,7 @@ const Advertisement = () => {
             {t("advertisement.desc")}
           </p>
 
-          <Link>
+          <Link to='/resume?category=advertise'>
             <Button
               myClass="hover:bg-yellow-600 bg-custom-yellow"
               text={t("view-more")}
@@ -37,7 +38,7 @@ const Advertisement = () => {
           </Link>
         </div>
         <div className="justify-center w-full md:p-0 md:w-5/12 lg:w-7/12 md:text-end" data-aos={`fade-down`} data-aos-duration={1500}>
-          <img className="p-5 mx-auto md:mx-0" src={Cards} alt="home cards" />
+          <img loading="lazy" className="p-5 mx-auto md:mx-0" src={Cards} alt="home cards" />
         </div>
       </div>
     </section>

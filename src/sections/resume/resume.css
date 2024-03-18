@@ -68,8 +68,8 @@
 
 @-webkit-keyframes slide-right {
   0% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+    -webkit-transform: translateX(-15%);
+    transform: translateX(-15%);
   }
 
   100% {
@@ -80,8 +80,8 @@
 
 @keyframes slide-right {
   0% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+    -webkit-transform: translateX(-15%);
+    transform: translateX(-15%);
   }
 
   100% {

@@ -45,6 +45,7 @@ const ServiceCard = ({ logo, title, desc, bgColor, color, handleCardHover, delay
       >
         <div className="flex justify-center">
           <img
+            loading="lazy"
             className="object-contain w-48 h-44"
             src={logo}
             alt={title}

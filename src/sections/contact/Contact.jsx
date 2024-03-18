@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form"
 import "./contact.css";
-import Btn from "../../assets/images/btn-send-text.png";
-import BtnLtr from "../../assets/images/btn-send-text-ltr.png";
 import api from "../../services/ContactUsApi";
 import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { setCookie, getCookie } from "../../utility/util";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-const Contact = () => {
+import 'react-toastify/dist/ReactToastify.css';
 
+const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
   const direction = useSelector((state) => state.direction);
   const {
@@ -22,20 +22,44 @@ const Contact = () => {
   const onSubmit = async (data) => {
     try {
       if (!getCookie('sentMessage')) {
-        await api.get('/send-message', {
+        setLoading(true);
+        api.get('/send-message', {
           params: data
-        });
-        setCookie('sentMessage', 'true', 1);
-        toast.success(t('contact.successMessage'), {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        })
+          .then(function (response) {
+            setCookie('sentMessage', 'true', 1);
+
+            toast.success(t('contact.successMessage'), {
+              position: "bottom-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach((input) => {
+              input.value = '';
+            });
+          })
+          .catch(function (error) {
+            toast.error(t('contact.errorMessage'), {
+              position: "bottom-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          })
+          .finally(function () {
+            setLoading(false);
+          });
       }
       else {
         toast.warning(t('contact.warningMessage'), {
@@ -49,24 +73,8 @@ const Contact = () => {
           theme: "light",
         });
       }
-      const inputs = document.querySelectorAll('input, textarea');
-      inputs.forEach((input) => {
-        input.value = '';
-      });
 
-      
-    } catch (error) {
-      toast.error(t('contact.errorMessage'), {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    }
+    } catch (error) { }
   };
 
 
@@ -139,13 +147,20 @@ const Contact = () => {
             ></textarea>
             {errors.message && (<p className="px-3 mt-2 text-red-500 text-start"> {errors.message?.message} </p>)}
             <div className="absolute flex justify-center w-full text-center -bottom-5 ">
-              <div className="relative flex cursor-pointer float w-36">
-                <button className="text-whit rounded-xl flex items-center" onClick={handleSubmit(onSubmit)} type="button">
-                  <span className="pt-1 bg-cyan-600">{t("contact.send")}</span>
-                  <span className="px-3 py-1 bg-cyan-400">
-                  { direction === "ltr" ? <IoIosArrowForward/> : <IoIosArrowBack/> }
+              <div className="relative flex cursor-pointer float">
+                {!loading ? (<button className="text-white flex items-center" onClick={handleSubmit(onSubmit)} type="button">
+                  <span className={`h-full flex px-4 py-2 justify-center items-center bg-cyan-600 ${direction === "ltr" ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}>{t("contact.send")}</span>
+                  <span className={`flex p-2 justify-center items-center text-3xl h-ful bg-cyan-500 ${direction === "ltr" ? 'rounded-e-2xl' : 'rounded-l-2xl'}`}>
+                    {direction === "ltr" ? <IoIosArrowForward /> : <IoIosArrowBack />}
                   </span>
                 </button>
+                ) : (<button type="button" class="bg-cyan-500 py-2 cursor-progress text-white flex justify-between items-center gap-4 rounded-2xl px-5" disabled>
+                  {t('contact.processing')}
+                  <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                </button>)}
               </div>
             </div>
           </div>

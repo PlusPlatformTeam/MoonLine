@@ -89,8 +89,9 @@
         "send":"SEND",
         "mobile": "Your Mobile:",
         "errorMessage": "Error Occured Please Try Again",
-        "successMessage": "YourMessage Sent Successfullytelgram",
-        "warningMessage": "Please Try Later"
+        "successMessage": "YourMessage Sent Successfully",
+        "warningMessage": "Please Try Later",
+        "processing": "Processing"
     },
 
     "footer":{
@@ -111,6 +112,8 @@
             "message": "Message Is Required",
             "mobileInvalid": "Mobile Not Valid"
         }        
-    }
+    },
+    "github": "GitHub",
+    "demo":"Demo"
 
 }
