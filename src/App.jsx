@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./sections/home/Home";
 import StartUp from "./sections/startup/StartUp";
+import Resume from "./sections/resume/Resume";
 import Advertisement from "./sections/advertisement/Advertisement";
 import FloatingNav from "./sections/floating-nav/FloatingNav";
 import WebApp from "./sections/webapp/WebApp";
@@ -12,7 +13,6 @@ import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Profile from "./sections/profile/Profile";
-import Resume from "./sections/resume/Resume";
 import "./i18n/config";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -94,7 +94,7 @@ const App = () => {
       document.body.style.overflowY = "auto";
     }
   }, [isLoading]);
-  console.log(isLoading, sessionStorage.getItem('isLoading'))
+
   return (
     <BrowserRouter dir={dir} ref={mainRef}>
       <Routes>
@@ -121,7 +121,6 @@ const App = () => {
         } />
         <Route path="/resume" element={<Resume />} />
         <Route path='/profile' element={<Profile />} />
-
       </Routes>
     </BrowserRouter>
   );

@@ -45,6 +45,7 @@
     "about":{
         "title": "درباره ما",
         "seeMore" : "جزییات بیشتر",
+        "members": "پـرسنــل",
         "pooya":{
             "name":"پویا صدری",
             "pro":"Full Stack Developer",

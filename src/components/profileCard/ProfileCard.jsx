@@ -13,7 +13,7 @@ const ProfileCard = ({ title }) => {
         <Link
           to={`/profile?name=${title}`}
           style={{ borderColor: color }}
-          class={`flex flex-col w-11/12 h-[80px] rounded-full mb-5 mt-5 bg-[#191F2C] relative ${
+          class={`flex flex-col w-10/12  md:w-11/12 h-[80px] rounded-full mb-5 mt-5 bg-[#191F2C] relative ${
             title === name ? " border-solid border-2" : ""
           }`}
         >
