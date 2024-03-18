@@ -11,6 +11,7 @@ import About from "./sections/about/About";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import Profile from "./sections/profile/Profile";
 import "./i18n/config";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -113,7 +114,7 @@ const App = () => {
     </main>
   } />
   <Route path="/blogs" element={<Home />} />
-
+  <Route path={`/profile/`} element={<Profile />} />
   
 </Routes>
 </BrowserRouter>

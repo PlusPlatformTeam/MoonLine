@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./Profile.css";
 import ProfileCard from "../../components/profileCard/ProfileCard";
 import Data from "./data";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
 import { PiUsersBold } from "react-icons/pi";
 import { RiProfileLine } from "react-icons/ri";
 import { HiOutlineUsers } from "react-icons/hi2";
@@ -22,7 +21,6 @@ import {
 const Profile = () => {
   const location = useLocation();
   const { t } = useTranslation();
-  const direction = useSelector((state) => state.direction);
   const [name, setName] = useState("");
 
   useEffect(() => {
@@ -119,6 +117,7 @@ const Profile = () => {
             <img
               className="rounded-full bg-[#fff] w-[350px] h-[350px] block absolute object-cover top-[98px] left-[275px] z-20"
               src={img}
+              alt={title}
             ></img>
           </div>
           <div className="w-full">

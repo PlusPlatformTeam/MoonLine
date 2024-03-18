@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { setCookie, getCookie } from "../../utility/util";
-
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 const Contact = () => {
 
   const { t } = useTranslation();
@@ -139,14 +139,12 @@ const Contact = () => {
             ></textarea>
             {errors.message && (<p className="px-3 mt-2 text-red-500 text-start"> {errors.message?.message} </p>)}
             <div className="absolute flex justify-center w-full text-center -bottom-5 ">
-              <div className="relative flex cursor-pointer float w-36 hover:scale-x-90">
-                <button onClick={handleSubmit(onSubmit)} type="button">
-                  <img src={direction === "rtl" ? Btn : BtnLtr} alt="btn" className="w-full h-12 " />
-                </button>
-                <h1 className={`text-white font-bold  ${direction === "rtl" ? "rtl-btn-position text-lg" : "ltr-btn-position text-2xl"}`}>{t("contact.send")}</h1>
-                <button type="button">
-                  <span>{t("contact.send")}</span>
-                  <i></i>
+              <div className="relative flex cursor-pointer float w-36">
+                <button className="text-whit rounded-xl flex items-center" onClick={handleSubmit(onSubmit)} type="button">
+                  <span className="pt-1 bg-cyan-600">{t("contact.send")}</span>
+                  <span className="px-3 py-1 bg-cyan-400">
+                  { direction === "ltr" ? <IoIosArrowForward/> : <IoIosArrowBack/> }
+                  </span>
                 </button>
               </div>
             </div>
