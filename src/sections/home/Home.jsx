@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import "./home.css";
 import Cards from "../../assets/images/homeCards.png";
 import EnCards from "../../assets/images/homeCardsLtr.png";
-
 import DobleArrow from "../../assets/images/left-doble-arrow.png";
 import LeftArrowService from "../../assets/images/left-arrow-service.png";
 import UnderLine from "../../assets/images/underLine.png";
@@ -40,9 +39,10 @@ const Home = () => {
           <div className="relative block w-full">
             <h2 className="mx-12 md:mt-16 text-2xl md:text-3xl font-bold text-white">
               {t("home.modern-design")}{" "}
-              <span className="relative text-3xl md:text-5xl font-bold blue-base-color">
+              <span className="relative text-3xl md:text-5xl font-bold blue-base-color size-text">
                 {t("moonline")}
                 <img
+                  loading="lazy"
                   src={UnderLine}
                   alt="moonline underline"
                   className={`absolute left-1 ${
@@ -66,6 +66,7 @@ const Home = () => {
                     {t("home.order")}
                   </p>
                   <img
+                    loading="lazy"
                     className={`h-8 opacity-50 ${
                       direction === "ltr" ? "rotate-180 ml-2 mr-2 " : ""
                     }`}
@@ -90,6 +91,7 @@ const Home = () => {
                     {t("home.moonline-service")}
                   </p>
                   <img
+                    loading="lazy"
                     className={`h-5 ${
                       direction === "ltr" ? "rotate-180 ml-3" : "ml-1"
                     }`}
@@ -104,6 +106,7 @@ const Home = () => {
 
         <div className="justify-center md:w-7/12 text-end ">
           <img
+            loading="lazy"
             className="w-full p-5 md:px-1 md:py-20 lg:p-16 xl:p-16 "
             src={direction==="rtl"?Cards:EnCards}
             alt="home cards"

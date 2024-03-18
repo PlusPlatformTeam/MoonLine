@@ -48,25 +48,31 @@
     "about":{
         "title": "About Us",
         "seeMore" : "See More",
+        "members": "Members",
         "pooya":{
             "name":"Pooya Sadri",
-            "pro":"Full Stack Developer"
+            "pro":"Full Stack Developer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "ali":{
             "name":"Ali Attar",
-            "pro":"Full Stack Developer"
+            "pro":"Full Stack Developer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "shahriar":{
-            "name":"Shariar Vaziri",
-            "pro":"Full Stack Designer"
+            "name":"Shahriar Vaziri",
+            "pro":"Full Stack Designer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "farzad":{
             "name":"Farzad Forouzanfar",
-            "pro":"Full Stack Developer"
+            "pro":"Full Stack Developer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "zahra":{
             "name":"Zahra Karimi",
-            "pro":"Motion Designer"
+            "pro":"Motion Designer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         }
     },
 
@@ -81,13 +87,34 @@
         "name": "Your Name:",
         "email": "Your Email:",
         "message": "What services are you looking for?",
-        "send":"SEND"
+        "send":"SEND",
+        "mobile": "Your Mobile:",
+        "errorMessage": "Error Occured Please Try Again",
+        "successMessage": "YourMessage Sent Successfully",
+        "warningMessage": "Please Try Later",
+        "processing": "Processing"
     },
 
     "footer":{
         "title": "Our Socials Networks",
         "all-rights": "All rights reserved. powered by",
         "moonline-team":"Moonline team"
-    }
+    },
+    "category":{
+        "all": "All",
+        "develpment": "Development",
+        "design": "Design",
+        "advertise" : "Advertise"
+    },
+    "formValidation": {
+        "contactUs": {
+            "name": "Name Is Required",
+            "mobileRequired": "Mobile Is Required",
+            "message": "Message Is Required",
+            "mobileInvalid": "Mobile Not Valid"
+        }        
+    },
+    "github": "GitHub",
+    "demo":"Demo"
 
 }

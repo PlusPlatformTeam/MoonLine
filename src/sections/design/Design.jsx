@@ -5,6 +5,7 @@ import Icon from "../../assets/images/icon-design.png";
 import Button from "../../components/button/Button";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Design = () => {
   const { t } = useTranslation();
@@ -12,9 +13,10 @@ const Design = () => {
 
   return (
     <section id="design" className="w-full section gradiant-bottom-light">
-      <div className="md:flex block md:flex-row w-full">
+      <div className="block w-full md:flex md:flex-row">
         <div className="relative left-0 md:w-7/12 " data-aos={`fade-down`} data-aos-duration={1500} >
           <img
+            loading="lazy"
             className={`cards absolute w-full md:py-2 md:pl-16 ${
               direction === "ltr" ? "transform scale-x-[-1]" : ""
             } `}
@@ -23,11 +25,12 @@ const Design = () => {
           />
         </div>
 
-        <div className="w-full sm:py-24 px-8 md:mx-12 mx-auto pt-96 sm:pt-96 md-px-0 md:mt-10 md:pt-0 md:w-5/12"  data-aos={`fade-down`} data-aos-duration={1500}>
+        <div className="w-full px-8 mx-auto sm:py-24 md:mx-12 pt-96 sm:pt-96 md-px-0 md:mt-10 md:pt-0 md:w-5/12"  data-aos={`fade-down`} data-aos-duration={1500}>
           <div className="flex flex-row ">
            
-            <h1 className="mt-3 md:text-4xl title text-3xl font-bold text-white relative">
+            <h1 className="relative mt-3 text-3xl font-bold text-white md:text-4xl title">
             <img
+              loading="lazy"
               className={`md:w-8 w-5 md:h-8 h-5 mt-2  md:mt-1 animate-ping absolute ${
                 direction === "rtl" ? "-right-9 md:-right-14" : "-left-9 md:-left-14"
               }`}
@@ -37,14 +40,16 @@ const Design = () => {
               {t("design.title")}{" "}
             </h1>
           </div>
-          <p className="mt-12 text-xl font-normal text-white leading-10" style={{ whiteSpace: 'pre-line' }}>
+          <p className="mt-12 text-xl font-normal leading-10 text-white" style={{ whiteSpace: 'pre-line' }}>
             {t("design.desc")}
           </p>
 
-          <Button
-            myClass="hover:bg-green-800 bg-custom-green "
-            text={t("view-more")}
-          />
+          <Link to='resume?category=design'>
+            <Button
+              myClass="hover:bg-green-800 bg-custom-green "
+              text={t("view-more")}
+            />
+          </Link>
         </div>
       </div>
     </section>

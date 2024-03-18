@@ -8,21 +8,23 @@ import BlueBall from "../../assets/images/blue-ball.png";
 import Button from "../../components/button/Button";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const WebApp = () => {
   const { t } = useTranslation();
   const direction = useSelector((state) => state.direction);
 
   return (
-    <section id="webapp" className="w-full lg:h-screen gradiant-top-light">
+    <section id="webapp" className="w-full gradiant-top-light">
       <div className="flex flex-col-reverse w-full lg:flex-row">
         <div
-          className="w-full px-3 lg:mx-12 lg:mt-16 mt-24 lg:w-5/12 z-0"
+          className="z-0 w-full px-3 mt-24 lg:mx-12 lg:mt-16 lg:w-5/12"
           data-aos={`fade-down`}
           data-aos-duration={1500}
         >
-          <div className="flex flex-row -mt-10 lg:mt-0 justify-center lg:justify-start">
+          <div className="flex flex-row justify-center -mt-10 lg:mt-0 lg:justify-start">
             <img
+              loading="lazy"
               className={`ml-5 ${
                 direction === "ltr" ? "rotate-180" : ""
               } h-10 lg:h-16`}
@@ -39,6 +41,7 @@ const WebApp = () => {
               {t("webapp.title")}
             </h1>
             <img
+              loading="lazy"
               className={`mr-5 ${
                 direction === "ltr" ? "rotate-180" : ""
               } h-10 lg:h-16`}
@@ -46,23 +49,27 @@ const WebApp = () => {
               alt="icon "
             />
           </div>
-          <p className="mt-12 text-xl font-normal text-white p-8 lg:p-8 leading-10">
+          <p className="p-8 mt-12 text-xl font-normal leading-10 text-white lg:p-8">
             {t("webapp.desc")}
           </p>
-          <Button
-            myClass="hover:bg-blue-500 bg-custom-blue mt-16 mb-10 lg:ml-7 lg:mt-20 lg:mb-0"
-            text={t("view-more")}
-          />
+          <Link to='resume?category=develpment'>
+            <Button
+              myClass="hover:bg-blue-500 bg-custom-blue mt-16 mb-10 lg:ml-7 lg:mt-20 lg:mb-0"
+              text={t("view-more")}
+            />
+          </Link>
         </div>
 
-        <div className="flex justify-center -mt-24 lg:-mt-16 lg:w-7/12 text-center p-5 ">
-          <div className="device-image justify-center text-center  mt-20 z-20 relative lg:-left-68 lg:mt-24 deviceCard">
+        <div className="flex justify-center p-5 -mt-24 text-center lg:-mt-16 lg:w-7/12 ">
+          <div className="relative z-20 justify-center mt-20 text-center device-image lg:-left-68 lg:mt-24 deviceCard">
           <img
+            loading="lazy"
             className={`absolute white-ball-position spin`}
             src={WhiteBall}
             alt="balls"
           />
-             <img
+          <img
+            loading="lazy"
             className={`absolute blue-ball-position blue-spin`}
             src={BlueBall}
             alt="balls"

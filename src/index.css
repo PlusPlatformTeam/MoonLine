@@ -5,16 +5,13 @@
 
 *,html,body{
   font-family: 'iranSans' !important;
-}
-
-html{
   scroll-behavior: smooth !important;
 }
 
 .section {
   flex: 1;
-  min-height: 100vh; /* Set a minimum height to fill the viewport */
-  position: relative; /* Required for absolute items within sections */
+  min-height: 100vh; 
+  position: relative; 
 }
 
 .scroll::-webkit-scrollbar{
@@ -58,15 +55,10 @@ border-radius: 10px !important;
 
 
 body {
-  scroll-behavior: smooth !important;
   overflow-x: hidden;
   overflow-y:scroll;
-  font-family: 'iranSans', sans-serif;
   direction: rtl;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -99,6 +91,10 @@ code {
 
 .bg-semi-transparent-yellow{
   background-color: rgba(203, 191, 1, 0.33);
+}
+
+.floatBtn {
+  overflow: hidden ;
 }
 
 @media (max-width: 1016px) {

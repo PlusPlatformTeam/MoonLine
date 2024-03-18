@@ -7,6 +7,7 @@ import Logo from "../../assets/images/logo-about.png";
 import "./about.css";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const { t } = useTranslation();
@@ -20,10 +21,11 @@ const About = () => {
       className="w-full overflow-hidden gradiant-bottom-light section"
     >
       <div className="flex flex-row w-full overflow-hidden">
-        <div className="w-full mt-16 overflow-x-hidden">
+        <div className="w-full -mt-10 overflow-x-hidden">
           <div className={`lg:mx-12 mt-16 md:mx-6 mx-3 overflow-hidden flex ${direction === "rtl" ? "flex-row" : "flex-row-reverse"}`}>
             <img
-              className={`${direction === "rtl" ? "ml-5" : "mr-5"}`}
+              loading="lazy"
+              className={`${direction === "rtl" ? "ml-2" : "mr-2"}`}
               src={Icon}
               alt="icon about us"
             />
@@ -52,15 +54,16 @@ const About = () => {
               <SplideSlide className="overflow-hidden min-h-[490px]" key={index}>
                 <div className="flex justify-center overflow-hidden hovereffect">
                   <div className="overlay">
-                    <img src={Logo} alt="Moonline logo" />
-                    <a style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" href="#vds">
+                    <img loading="lazy" src={Logo} alt="Moonline logo" />
+                    <Link style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" to={`profile?name=${title}`}>
                       {t("about.seeMore")}
-                    </a>
+                    </Link>
                   </div>
                   <img
                     className="w-[300px] object-cover h-[300px] rounded-3xl mb-4"
                     src={img}
                     alt={title}
+                    loading="lazy"
                   />
                 </div>
                 <div className="mt-5 text-center">

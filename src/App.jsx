@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./sections/home/Home";
 import StartUp from "./sections/startup/StartUp";
+import Resume from "./sections/resume/Resume";
 import Advertisement from "./sections/advertisement/Advertisement";
 import FloatingNav from "./sections/floating-nav/FloatingNav";
 import WebApp from "./sections/webapp/WebApp";
@@ -10,6 +12,7 @@ import About from "./sections/about/About";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import Profile from "./sections/profile/Profile";
 import "./i18n/config";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -48,23 +51,40 @@ const App = () => {
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
     return () => clearInterval(checkYPosition);
-  }, [siteYPostion]);
+  });
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(sessionStorage.getItem('isLoading'));
   const { t, i18n } = useTranslation();
   const [dir, setDir] = useState(t("dir"));
 
   useEffect(() => {
     i18n.changeLanguage(lang);
     setDir(direction);
+    AOS.refresh();
   }, [lang, direction, i18n]);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
+    if (sessionStorage.getItem('isLoading') === null) {
+      sessionStorage.setItem('isLoading', true);
+    }
 
-    return () => clearTimeout(timeoutId);
+    AOS.init({
+      duration: 3000,
+    });
+
+    if (sessionStorage.getItem('isLoading') === 'true') {
+      const timeoutId = setTimeout(() => {
+        setIsLoading(false);
+        sessionStorage.setItem('isLoading', false)
+      }, 4000);
+
+      return () => clearTimeout(timeoutId);
+    }
+    else {
+      setIsLoading(false);
+      sessionStorage.setItem('isLoading', false)
+    }
+    
   }, []);
 
   useEffect(() => {
@@ -75,36 +95,34 @@ const App = () => {
     }
   }, [isLoading]);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 3000,
-    });
-  }, []);
-
-  useEffect(() => {
-    AOS.refresh();
-  }, [lang, direction, i18n]);
-
   return (
-    <main dir={dir} ref={mainRef}>
-      {isLoading ? (
-        <StartUp />
-      ) : (
-        <>
-          <Navbar />
-          <Home />
-          <Service />
-          <WebApp />
-          <Design />
-          <Advertisement />
-          <About />
-          <Contact />
-          <Footer />
-          {showFloatingNav && <FloatingNav />}
-          <FloatButton />
-        </>
-      )}
-    </main>
+    <BrowserRouter dir={dir} ref={mainRef}>
+      <Routes>
+        <Route index element={
+          <main dir={dir} ref={mainRef}>
+            {sessionStorage.getItem('isLoading') === 'true' ? (
+              <StartUp />
+            ) : (
+              <>
+                <Navbar />
+                <Home />
+                <Service />
+                <WebApp />
+                <Design />
+                <Advertisement />
+                <About />
+                <Contact />
+                <Footer />
+                {showFloatingNav && <FloatingNav />}
+                <FloatButton />
+              </>
+            )}
+          </main>
+        } />
+        <Route path="/resume" element={<Resume />} />
+        <Route path='/profile' element={<Profile />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
