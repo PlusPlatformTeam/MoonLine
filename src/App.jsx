@@ -17,8 +17,6 @@ import { useSelector } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FloatButton from "./components/floatButton/FloatButton";
-import Resume from "./sections/resume/Resume";
-import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const direction = useSelector((state) => state.direction);
@@ -91,34 +89,34 @@ const App = () => {
   return (
 
 
-    <BrowserRouter dir={dir}>
-      <Routes>
-        <Route index element={
-          <main dir={dir}>
-            {isLoading ? (
-              <StartUp />
-            ) : (
-              <>
-                <Navbar />
-                <Home />
-                <Service />
-                <WebApp />
-                <Design />
-                <Advertisement />
-                <About />
-                <Contact />
-                <Footer />
-                {showFloatingNav && <FloatingNav />}
-                <FloatButton />
-              </>
-            )}
-          </main>
-        } />
-        <Route path="/blogs" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
+<BrowserRouter dir={dir} ref={mainRef}>
+<Routes>
+  <Route index element={
+      <main dir={dir} ref={mainRef}>
+      {isLoading ? (
+        <StartUp />
+      ) : (
+        <>
+          <Navbar />
+          <Home />
+          <Service />
+          <WebApp />
+          <Design />
+          <Advertisement />
+          <About />
+          <Contact />
+          <Footer />
+          {showFloatingNav && <FloatingNav />}
+          <FloatButton />
+        </>
+      )}
+    </main>
+  } />
+  <Route path="/blogs" element={<Home />} />
 
-      </Routes>
-    </BrowserRouter>
+  
+</Routes>
+</BrowserRouter>
   );
 };
 

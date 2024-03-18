@@ -50,23 +50,28 @@
         "seeMore" : "See More",
         "pooya":{
             "name":"Pooya Sadri",
-            "pro":"Full Stack Developer"
+            "pro":"Full Stack Developer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "ali":{
             "name":"Ali Attar",
-            "pro":"Full Stack Developer"
+            "pro":"Full Stack Developer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "shahriar":{
             "name":"Shariar Vaziri",
-            "pro":"Full Stack Designer"
+            "pro":"Full Stack Designer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "farzad":{
             "name":"Farzad Forouzanfar",
-            "pro":"Full Stack Developer"
+            "pro":"Full Stack Developer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "zahra":{
             "name":"Zahra Karimi",
-            "pro":"Motion Designer"
+            "pro":"Motion Designer",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         }
     },
 
