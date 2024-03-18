@@ -53,7 +53,7 @@ const About = () => {
                 <div className="flex justify-center overflow-hidden hovereffect">
                   <div className="overlay">
                     <img src={Logo} alt="Moonline logo" />
-                    <a style={{ left: direction === "rtl" ? '30%' : '35%' }} class="info" href="#vds">
+                    <a style={{ left: direction === "rtl" ? '30%' : '35%' }} className="info" href="#vds">
                       {t("about.seeMore")}
                     </a>
                   </div>

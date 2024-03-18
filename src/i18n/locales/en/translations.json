@@ -81,13 +81,31 @@
         "name": "Your Name:",
         "email": "Your Email:",
         "message": "What services are you looking for?",
-        "send":"SEND"
+        "send":"SEND",
+        "mobile": "Your Mobile:",
+        "errorMessage": "Error Occured Please Try Again",
+        "successMessage": "YourMessage Sent Successfullytelgram",
+        "warningMessage": "Please Try Later"
     },
 
     "footer":{
         "title": "Our Socials Networks",
         "all-rights": "All rights reserved. powered by",
         "moonline-team":"Moonline team"
+    },
+    "category":{
+        "all": "All",
+        "develpment": "Development",
+        "design": "Design",
+        "advertise" : "Advertise"
+    },
+    "formValidation": {
+        "contactUs": {
+            "name": "Name Is Required",
+            "mobileRequired": "Mobile Is Required",
+            "message": "Message Is Required",
+            "mobileInvalid": "Mobile Not Valid"
+        }        
     }
 
 }

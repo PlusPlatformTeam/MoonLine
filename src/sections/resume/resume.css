@@ -1,0 +1,91 @@
+.hover-resume-card {
+  background-image: linear-gradient(#5b5b5b, #1d1d1d);
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.hover-resume-card:hover {
+  opacity: 0.9;
+}
+
+.github {
+  display: none;
+}
+
+.hover-resume-card:hover .github {
+  padding: 12px 10px;
+  color: aliceblue;
+  border: 2px solid aliceblue;
+  border-radius: 12px;
+  display: block;
+}
+
+.hover-resume-card:hover .animate-slide-left {
+  -webkit-animation: slide-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.hover-resume-card:hover .animate-slide-right {  
+  -webkit-animation: slide-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.center { 
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: top left;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
