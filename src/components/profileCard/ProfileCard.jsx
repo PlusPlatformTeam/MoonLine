@@ -21,7 +21,7 @@ const ProfileCard = ({ title }) => {
             <img
               className="w-[80px] h-[80px] rounded-full absolute left-[-2px] object-cover top-[-1px]"
               src={img}
-              alt="profile-image"
+              alt={title}
             />
             <div className="relative px-2 text-center">
               <span

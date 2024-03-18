@@ -83,7 +83,11 @@
         "name":"نام شما:",
         "email":"ایمیل شما:",
         "message":"به دنبال چه خدماتی هستید؟",
-        "send":"ارسال متن"
+        "send":"ارسال متن",
+        "mobile": "موبایل شما :",
+        "successMessage": "پیام شما با موفقیت ارسال شد",
+        "errorMessage": "متاسفانه پیام شما ارسال نشد مجدد تلاش نمایید",
+        "warningMessage": "لطفا چند لحظه بعد دوباره تلاش نمایید"
 
     },
 
@@ -91,6 +95,21 @@
         "title": "Our Socials Networks",
         "all-rights": "All rights reserved. powered by",
         "moonline-team":"Moonline team"
+    },
+    "category":{
+        "all": "همه",
+        "develpment": "نرم افزار",
+        "design": "طراحی",
+        "advertise": "تبلیغات و محتوا"
+    },
+    "formValidation": {
+        "contactUs": {
+            "name": "نام الزامی است",
+            "mobileRequired": "موبایل الزامی است",
+            "message": "متن پیام الزامی است",
+            "mobileInvalid": "موبایل معتبر نمی باشد"
+        }
+        
     }
 
 

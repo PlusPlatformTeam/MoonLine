@@ -1,0 +1,7 @@
+.gallery-item {
+    @apply h-64 md:h-80;
+  }
+  
+  .gallery-item img {
+    @apply object-cover w-full h-full rounded-lg;
+  }

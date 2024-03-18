@@ -11,13 +11,13 @@ import About from "./sections/about/About";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import Profile from "./sections/profile/Profile";
 import "./i18n/config";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FloatButton from "./components/floatButton/FloatButton";
-import Profile from "./sections/profile/Profile";
 
 const App = () => {
   const direction = useSelector((state) => state.direction);
@@ -50,7 +50,7 @@ const App = () => {
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
     return () => clearInterval(checkYPosition);
-  }, [siteYPostion]);
+  });
 
   const [isLoading, setIsLoading] = useState(true);
   const { t, i18n } = useTranslation();
@@ -88,35 +88,36 @@ const App = () => {
   }, [lang, direction, i18n]);
 
   return (
-    <BrowserRouter dir={dir} ref={mainRef}>
-      <Routes>
-        <Route
-          index
-          element={
-            <main dir={dir} ref={mainRef}>
-              {isLoading ? (
-                <StartUp />
-              ) : (
-                <>
-                  <Navbar />
-                  <Home />
-                  <Service />
-                  <WebApp />
-                  <Design />
-                  <Advertisement />
-                  <About />
-                  <Contact />
-                  <Footer />
-                  {showFloatingNav && <FloatingNav />}
-                  <FloatButton />
-                </>
-              )}
-            </main>
-          }
-        />
-        <Route path={`/profile/`} element={<Profile />} />
-      </Routes>
-    </BrowserRouter>
+
+
+<BrowserRouter dir={dir} ref={mainRef}>
+<Routes>
+  <Route index element={
+      <main dir={dir} ref={mainRef}>
+      {isLoading ? (
+        <StartUp />
+      ) : (
+        <>
+          <Navbar />
+          <Home />
+          <Service />
+          <WebApp />
+          <Design />
+          <Advertisement />
+          <About />
+          <Contact />
+          <Footer />
+          {showFloatingNav && <FloatingNav />}
+          <FloatButton />
+        </>
+      )}
+    </main>
+  } />
+  <Route path="/blogs" element={<Home />} />
+  <Route path={`/profile/`} element={<Profile />} />
+  
+</Routes>
+</BrowserRouter>
   );
 };
 
