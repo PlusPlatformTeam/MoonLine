@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Profile.css";
 import ProfileCard from "../../components/profileCard/ProfileCard";
 import Data from "./data";
@@ -22,6 +22,16 @@ const Profile = () => {
   const location = useLocation();
   const { t } = useTranslation();
   const [name, setName] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -30,7 +40,6 @@ const Profile = () => {
   }, [location.search]);
 
   const selectedData = Data().find((item) => item.title === name);
-
   if (!selectedData) {
     return <div>No data found for {name}</div>;
   }
@@ -45,6 +54,7 @@ const Profile = () => {
     desc,
     bgColor,
     color,
+    job
   } = selectedData;
 
   return (
@@ -69,41 +79,41 @@ const Profile = () => {
             style={{ backgroundColor: `${bgColor}` }}
           >
             <div className="flex items-end justify-end">
-              <p className="text-lg ml-6 text-white">{link}</p>
+              <p className="text-lg ml-6 text-white mb-[7px]">{link}</p>
               <RiProfileLine
-                className={`text-[35px] text-xl z-50 opacity-100`}
+                className={`text-[43px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
 
             <div className="flex items-end justify-end">
-              <p className="text-lg ml-6 text-white">{telegram}</p>
+              <p className="text-lg ml-6 text-white mb-[7px]">{telegram}</p>
               <FaTelegram
-                className={`text-[35px] text-xl z-50 opacity-100`}
+                className={`text-[43px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
 
             <div className="flex items-end justify-end">
-              <p className="text-lg ml-6 text-white">{insta}</p>
+              <p className="text-lg ml-6 text-white mb-[7px]">{insta}</p>
               <FaInstagramSquare
-                className={`text-[35px] text-xl z-50 opacity-100`}
+                className={`text-[43px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
 
             <div className="flex items-end justify-end">
-              <p className="text-lg ml-6 text-white">{linkedin}</p>
+              <p className="text-lg ml-6 text-white mb-[7px]">{linkedin}</p>
               <FaLinkedin
-                className={`text-[35px] text-xl z-50 opacity-100`}
+                className={`text-[43px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
 
             <div className="flex items-end justify-end">
-              <p className="text-lg ml-6 text-white">{youtube}</p>
+              <p className="text-lg ml-6 text-white mb-[7px]">{youtube}</p>
               <FaYoutube
-                className={`text-[35px] text-xl z-50 opacity-100`}
+                className={`text-[43px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -138,7 +148,7 @@ const Profile = () => {
 
       <section
       id="profile"
-      className={`w-full gradiant-bottom-light section h-screen relative md:hidden block`}
+      className={`w-full gradiant-bottom-light section h-full relative md:hidden block`}
     >
       <div className="w-full relative top-1">
         <img src={Burger} alt="burger icon" className="m-4 w-[45px] h-[45px] rounded-full absolute" />
@@ -146,20 +156,20 @@ const Profile = () => {
             <HiOutlineUsers className="text-center justify-center text-white h-[28px] w-[28px] mt-4"/>
         </div>
         <div className="flex w-full justify-center">
-            <h1 className="text-xl text-white font-bold">About Us</h1>
+            <h1 className="text-xl text-white font-bold">{t('about.title')}</h1>
         </div>
       </div>
 
-      <div className="w-full flex relative justify-center text-center mt-4">
+      <div className="w-full flex relative justify-center text-center mt-4" onClick={handleOpenModal}>
         <div className="w-[35%] bg-[#0E2B38] rounded-full h-[35px] flex justify-between items-center gap-2  pr-3">
-          <p className="text-white text-lg">Members</p>
+          <p className="text-white text-lg">{t('about.members')}</p>
           <img src={MemberIcon} alt="MemberIcon" className="h-[35px] w-[35px]"/>
         </div>
       </div>
 
       <div className="w-full flex justify-center text-center mt-4 relative">
-        <img src={MemberLight} alt="MemberLight" className="w-[250px] h-[250px]  z-10" />
-        <img src={img} alt="MemberLight" className=" absolute w-[142px] h-[142px] z-30 rounded-full object-cover top-14" />
+        <img src={MemberLight} alt="MemberLight" className="w-[300px] h-[300px]  z-10" />
+        <img src={img} alt="MemberLight" className=" absolute w-[170px] h-[170px] z-30 rounded-full object-cover top-16" />
       </div>
 
       <div className="w-full flex justify-center text-center mt-4 relative">
@@ -169,7 +179,7 @@ const Profile = () => {
       <div className="w-full flex justify-center text-center mt-4 relative">
         <div className="w-[50%] h-[50px] bg-[#072436] rounded-3xl z-10 flex justify-center py-2 px-2">
            <div className={`w-full h-[35px] rounded-full z-40 flex justify-center text-center items-center`} style={{backgroundColor:color}}>
-              <p className="text-white text-sm font-normal">full stack development</p>
+              <p className="text-white text-sm font-normal">{job}</p>
            </div>
         </div>
       </div>
@@ -181,34 +191,61 @@ const Profile = () => {
       </div>
 
       <div className="w-full flex justify-center text-center mt-6">
-          <div className="w-[80%] h-[60px] rounded-xl flex px-4 py-3 justify-between" style={{backgroundColor:bgColor}}>
-          <FaYoutube
-                className={`text-[40px] text-xl z-50 opacity-100`}
+          <div className="w-[80%] h-[70px] rounded-xl flex px-4 py-3 justify-between" style={{backgroundColor:bgColor}}>
+          <Link to={youtube} className="relative"> 
+             <FaYoutube
+                   className={`text-[43px] z-50 opacity-100`}
+                   style={{ color: color }}
+             />
+          </Link>
+
+          <Link to={linkedin}>
+              <FaLinkedin
+                   className={`text-[43px] z-50 opacity-100`}
+                   style={{ color: color }}
+              />
+          </Link>
+
+          <Link to={insta}>
+              <FaInstagramSquare
+                className={`text-[43px]  z-50 opacity-100`}
                 style={{ color: color }}
-          />
-          <FaLinkedin
-                className={`text-[40px] text-xl z-50 opacity-100`}
-                style={{ color: color }}
-          />
-          <FaInstagramSquare
-                className={`text-[40px] text-xl z-50 opacity-100`}
-                style={{ color: color }}
-          />
+              />
+          </Link>
+
+          <Link to={telegram}>
           <FaTelegram
-                className={`text-[40px] text-xl z-50 opacity-100`}
+                className={`text-[43px]  z-50 opacity-100`}
                 style={{ color: color }}
           />
-          <RiProfileLine
-                className={`text-[40px] text-xl z-50 opacity-100`}
-                style={{ color: color }}
-          />
+          </Link>
+
+          <Link to={link}>
+               <RiProfileLine
+                     className={`text-[43px] z-50 opacity-100`}
+                     style={{ color: color }}
+               />
+          </Link>
 
           </div>
       </div>
+      <ProfileModal isOpen={isModalOpen} onClose={handleCloseModal} title={title} />
 
       </section>
     </>
 
+  );
+};
+
+
+const ProfileModal = ({ isOpen, onClose, title }) => {
+  return (
+    <div className={`${isOpen ? "block" : "hidden"} bg-black opacity-90 absolute top-0 z-[1000] h-screen w-screen`}>
+      <p className="text-white text-3xl font-semibold mt-7 mr-7" onClick={onClose}>X</p>
+      <div className="mr-12 mt-24">
+        <ProfileCard title={title} />
+      </div>
+    </div>
   );
 };
 

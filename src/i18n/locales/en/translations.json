@@ -48,6 +48,7 @@
     "about":{
         "title": "About Us",
         "seeMore" : "See More",
+        "members": "Members",
         "pooya":{
             "name":"Pooya Sadri",
             "pro":"Full Stack Developer",
@@ -59,7 +60,7 @@
             "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },
         "shahriar":{
-            "name":"Shariar Vaziri",
+            "name":"Shahriar Vaziri",
             "pro":"Full Stack Designer",
             "info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quam! Officia assumenda est animi vero expedita voluptate explicabo. Deserunt esse unde dolores, perferendis assumenda sint ullam"
         },

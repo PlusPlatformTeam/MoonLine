@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./sections/home/Home";
 import StartUp from "./sections/startup/StartUp";
+import Resume from "./sections/resume/Resume";
 import Advertisement from "./sections/advertisement/Advertisement";
 import FloatingNav from "./sections/floating-nav/FloatingNav";
 import WebApp from "./sections/webapp/WebApp";
@@ -113,7 +114,7 @@ const App = () => {
       )}
     </main>
   } />
-  <Route path="/blogs" element={<Home />} />
+  <Route path="/resume" element={<Resume />} />
   <Route path={`/profile/`} element={<Profile />} />
   
 </Routes>

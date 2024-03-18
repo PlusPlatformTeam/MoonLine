@@ -1,8 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form"
 import "./contact.css";
-import Btn from "../../assets/images/btn-send-text.png";
-import BtnLtr from "../../assets/images/btn-send-text-ltr.png";
+import 'react-toastify/dist/ReactToastify.css';
 import api from "../../services/ContactUsApi";
 import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from "react-i18next";
