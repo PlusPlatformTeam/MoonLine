@@ -137,13 +137,6 @@ const Profile = () => {
       </div>
       </section>
 
-
-
-
-
-
-
-
       <section
       id="profile"
       className={`w-full gradiant-bottom-light section h-screen relative md:hidden block`}
