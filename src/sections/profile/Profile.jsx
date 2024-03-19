@@ -10,6 +10,7 @@ import { HiOutlineUsers } from "react-icons/hi2";
 import MemberIcon from "../../assets/images/members-icon.png";
 import MemberLight from "../../assets/images/member-light.png";
 import Burger from "../../assets/images/burger.png";
+import MobileNavbar from "../../components/mobileNavbar/MobileNavbar";
 
 import {
   FaTelegram,
@@ -23,7 +24,7 @@ const Profile = () => {
   const { t } = useTranslation();
   const [name, setName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isMobileNavHidden, setIsMobileNavHidden] = useState(true);
   
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -63,14 +64,14 @@ const Profile = () => {
       id="profile"
       className={`w-full overflow-hidden gradiant-bottom-light section h-screen relative md:block hidden`}
     >
-      <div className="flex flex-row w-full overflow-hidden h-full ">
+      <div className="flex flex-row w-full h-full overflow-hidden ">
         <div className="w-3/12 h-full gap-y-36">
-          <div className="flex  mt-16 mr-8 gap-5">
+          <div className="flex gap-5 mt-16 mr-8">
             <PiUsersBold
               className={`text-[50px] text-3xl`}
               style={{ color: color }}
             />
-            <p className="text-3xl text-white mt-2 w-auto ">
+            <p className="w-auto mt-2 text-3xl text-white ">
               {t("about.title")}
             </p>
           </div>
@@ -119,7 +120,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="w-7/12 h-full relative ">
+        <div className="relative w-7/12 h-full ">
           <div>
             <span className="rounded-full bg-[#fff] w-[500px] h-[500px] opacity-5 block absolute top-5 left-[200px] justify-center"></span>
             <span className="rounded-full bg-[#fff] w-[440px] h-[440px] opacity-10 block absolute top-[52px] left-[230px] "></span>
@@ -150,47 +151,47 @@ const Profile = () => {
       id="profile"
       className={`w-full gradiant-bottom-light section h-full relative md:hidden block`}
     >
-      <div className="w-full relative top-1">
-        <img src={Burger} alt="burger icon" className="m-4 w-[45px] h-[45px] rounded-full absolute" />
-        <div className="flex w-full justify-center">
+      <div className="relative w-full top-1">
+        <img onClick={() => { setIsMobileNavHidden(false) }} src={Burger} alt="burger icon" className="m-4 w-[45px] h-[45px] rounded-full absolute" />
+        <div className="flex justify-center w-full">
             <HiOutlineUsers className="text-center justify-center text-white h-[28px] w-[28px] mt-4"/>
         </div>
-        <div className="flex w-full justify-center">
-            <h1 className="text-xl text-white font-bold">{t('about.title')}</h1>
+        <div className="flex justify-center w-full">
+            <h1 className="text-xl font-bold text-white">{t('about.title')}</h1>
         </div>
       </div>
 
-      <div className="w-full flex relative justify-center text-center mt-4" onClick={handleOpenModal}>
+      <div className="relative flex justify-center w-full mt-4 text-center" onClick={handleOpenModal}>
         <div className="w-[35%] bg-[#0E2B38] rounded-full h-[35px] flex justify-between items-center gap-2  pr-3">
-          <p className="text-white text-lg">{t('about.members')}</p>
+          <p className="text-lg text-white">{t('about.members')}</p>
           <img src={MemberIcon} alt="MemberIcon" className="h-[35px] w-[35px]"/>
         </div>
       </div>
 
-      <div className="w-full flex justify-center text-center mt-4 relative">
+      <div className="relative flex justify-center w-full mt-4 text-center">
         <img src={MemberLight} alt="MemberLight" className="w-[300px] h-[300px]  z-10" />
         <img src={img} alt="MemberLight" className=" absolute w-[170px] h-[170px] z-30 rounded-full object-cover top-16" />
       </div>
 
-      <div className="w-full flex justify-center text-center mt-4 relative">
-          <p className="text-xl text-white font-semibold">{title}</p>
+      <div className="relative flex justify-center w-full mt-4 text-center">
+          <p className="text-xl font-semibold text-white">{title}</p>
       </div>
 
-      <div className="w-full flex justify-center text-center mt-4 relative">
+      <div className="relative flex justify-center w-full mt-4 text-center">
         <div className="w-[50%] h-[50px] bg-[#072436] rounded-3xl z-10 flex justify-center py-2 px-2">
            <div className={`w-full h-[35px] rounded-full z-40 flex justify-center text-center items-center`} style={{backgroundColor:color}}>
-              <p className="text-white text-sm font-normal">{job}</p>
+              <p className="text-sm font-normal text-white">{job}</p>
            </div>
         </div>
       </div>
 
-      <div className="w-full flex justify-center text-center mt-4">
+      <div className="flex justify-center w-full mt-4 text-center">
           <p className="text-white text-sm w-[70%]">
           xttextxttexttxttexttexttexttexttexttexttext texttexttext texttexttexttext texttexttexttexttexttext
           </p>
       </div>
 
-      <div className="w-full flex justify-center text-center mt-6">
+      <div className="flex justify-center w-full mt-6 text-center">
           <div className="w-[80%] h-[70px] rounded-xl flex px-4 py-3 justify-between" style={{backgroundColor:bgColor}}>
           <Link to={youtube} className="relative"> 
              <FaYoutube
@@ -230,7 +231,7 @@ const Profile = () => {
           </div>
       </div>
       <ProfileModal isOpen={isModalOpen} onClose={handleCloseModal} title={title} />
-
+      <MobileNavbar isHidden={isMobileNavHidden} onHidden={setIsMobileNavHidden}/>
       </section>
     </>
 
@@ -241,8 +242,8 @@ const Profile = () => {
 const ProfileModal = ({ isOpen, onClose, title }) => {
   return (
     <div className={`${isOpen ? "block" : "hidden"} bg-black opacity-90 absolute top-0 z-[1000] h-screen w-screen`}>
-      <p className="text-white text-3xl font-semibold mt-7 mr-7" onClick={onClose}>X</p>
-      <div className="mr-12 mt-24">
+      <p className="text-3xl font-semibold text-white mt-7 mr-7" onClick={onClose}>X</p>
+      <div className="mt-24 mr-12">
         <ProfileCard title={title} />
       </div>
     </div>

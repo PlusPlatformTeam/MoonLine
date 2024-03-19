@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .hover-resume-card {
   background-image: linear-gradient(#5b5b5b, #1d1d1d);
   width: 100%;
