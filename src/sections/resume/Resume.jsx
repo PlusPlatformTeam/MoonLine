@@ -4,7 +4,6 @@ import CategoryList from "../../components/categoryList/CategoryList";
 import React, {useState, useEffect} from 'react';
 import { useLocation } from "react-router-dom";
 import "./resume.css";
-import "../../components/navbar/navbar.css"
 import Gallery from "./Gallery";
 import Burger from "../../assets/images/burger.png";
 import MobileNavbar from "../../components/mobileNavbar/MobileNavbar";
@@ -23,7 +22,6 @@ function Resume() {
     
         window.addEventListener('resize', handleResize);
     
-        // Clean up the event listener on component unmount
         return () => {
           window.removeEventListener('resize', handleResize);
         };
@@ -41,7 +39,7 @@ function Resume() {
       }, [location.search, validCategories]);
 
     return (
-        <div className="pb-8 gradiant-bottom-light">
+        <div className="pb-8 overflow-hidden gradiant-bottom-light">
             <div className="hidden lg:block md:block sm:block">
                 {windowWidth > 639 && <Navbar />}
             </div>
