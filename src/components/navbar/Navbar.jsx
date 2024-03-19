@@ -12,7 +12,7 @@ const Navbar = ({ changeLanguage, handleDirChange }) => {
     <nav id="navbar" dir="rtl" className="w-full overflow-hidden bg-black border-gray-200 nav-bar">
       <div className="flex flex-wrap items-center justify-between w-full px-2 py-5 lg:px-6 md:px-6">
         <Link to="/" className="flex items-center">
-          <img src={Logo} className="h-8 mr-3" alt="Flowbite Logo" />
+          <img src={Logo} className="h-8 mr-3" alt="Moonline Logo" />
         </Link>
 
         <ul className="flex flex-col justify-center p-4 mt-3 font-medium text-center text-white md:p-0 md:flex-row md:space-x-4 md:mt-0 md:border-0 nav-list">
