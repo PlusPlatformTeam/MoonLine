@@ -148,7 +148,7 @@ const Contact = () => {
             {errors.message && (<p className="px-3 mt-2 text-red-500 text-start"> {errors.message?.message} </p>)}
             <div className="absolute flex justify-center w-full text-center -bottom-5 ">
               <div className="relative flex cursor-pointer float">
-                {!loading ? (<button className="text-white flex items-center" onClick={handleSubmit(onSubmit)} type="button">
+                {!loading ? (<button className="flex items-center text-white" onClick={handleSubmit(onSubmit)} type="button">
                   <span className={`h-full flex px-4 py-2 justify-center items-center bg-cyan-600 ${direction === "ltr" ? 'rounded-l-2xl' : 'rounded-r-2xl'}`}>{t("contact.send")}</span>
                   <span className={`flex p-2 justify-center items-center text-3xl h-ful bg-cyan-500 ${direction === "ltr" ? 'rounded-e-2xl' : 'rounded-l-2xl'}`}>
                     {direction === "ltr" ? <IoIosArrowForward /> : <IoIosArrowBack />}
