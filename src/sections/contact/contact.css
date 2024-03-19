@@ -14,3 +14,15 @@
     margin-left: 20px !important;
     margin-top: 10px;
 }
+
+.Toastify__toast-container {
+    bottom: 0px !important;
+    left: 0px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px !important;
+    width: 100% !important;
+}
