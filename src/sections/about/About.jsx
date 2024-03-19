@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <section
-      dir="rtl"
+      dir="ltr"
       id="about"
       className="w-full overflow-hidden gradiant-bottom-light section"
     >
@@ -41,12 +41,12 @@ const About = () => {
               autoWidth: true,
               focus: "center",
               perPage: 1,
-              gap: "2rem",
-              rewind: true,
+              gap: "3rem",
+              rewind: false,
               pagination: false,
               autoplay: true,
               pauseOnHover: true,
-              resetProgress: true,
+              resetProgress: false,
             }}
             aria-label="About US"
           >
