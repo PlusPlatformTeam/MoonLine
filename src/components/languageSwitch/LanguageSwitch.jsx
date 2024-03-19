@@ -3,7 +3,7 @@ import "./languageSwitch.css";
 import { useDispatch } from "react-redux";
 
 const LanguageSwitch = () => {
-  const [language, setLanguage] = useState("EN");
+  const [language, setLanguage] = useState("FA");
   const dispatch = useDispatch();
 
   const handleToggle = () => {
@@ -24,8 +24,8 @@ const LanguageSwitch = () => {
 
       <label htmlFor="switch" data-language={language === "FA" ? "FA" : "EN"}>
         <div className="flex flex-row justify-between mx-2 mt-2 font-bold lang-txt">
-          <h1>FA</h1>
           <h1>EN</h1>
+          <h1>FA</h1>
         </div>
 
         <div className="snippet" data-title="dot-pulse">

@@ -1,8 +1,8 @@
 import * as actions from "./Actions";
 
 const initialState = {
-  lng: "EN",
-  direction: "ltr",
+  lng: "FA",
+  direction: "rtl",
   counter: 0,
 };
 
