@@ -12,11 +12,10 @@ const GalleryItem = ({ item }) => {
                     className="h-full max-w-full rounded-lg"
                     src={item.cover}
                     alt={item.github}
-                    loading="lazy"
                 />
                 <div className="flex flex-col justify-between p-2 py-8 rounded-lg hover-resume-card">
                     <div className="">
-                        <p className="text-white animate-slide-right lg:text-base text-sm" style={{ direction }}>
+                        <p className="text-sm text-white animate-slide-right lg:text-base" style={{ direction }}>
                             {item.desc}
                         </p>
                     </div>
@@ -25,14 +24,14 @@ const GalleryItem = ({ item }) => {
                             { 
                                 item.github 
                                 && 
-                                <a href={item.github} className="border-2 border-gray-50 rounded-lg text-sm py-1 px-2 lg:px-4 lg:text-base md:text-md">
+                                <a href={item.github} className="px-2 py-1 text-sm border-2 rounded-lg border-gray-50 lg:px-4 lg:text-base md:text-md">
                                     {t('github')}
                                 </a> 
                             }
                             { 
                                 item.demo 
                                 && 
-                                <a href={item.demo} className="border-2 border-gray-50 rounded-lg text-sm py-1 px-2 lg:px-4 lg:text-base md:text-md">
+                                <a href={item.demo} className="px-2 py-1 text-sm border-2 rounded-lg border-gray-50 lg:px-4 lg:text-base md:text-md">
                                     {t('demo')}
                                 </a> 
                             }
