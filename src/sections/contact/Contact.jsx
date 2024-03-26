@@ -46,16 +46,30 @@ const Contact = () => {
             });
           })
           .catch(function (error) {
-            toast.error(t('contact.errorMessage'), {
-              position: "bottom-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-            });
+            if (error && error.response && error.response.status && error.response.status === 429) {
+              toast.warning(t('contact.warningMessage'), {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+              });
+            }
+            else {
+              toast.error(t('contact.errorMessage'), {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+              });
+            }
           })
           .finally(function () {
             setLoading(false);
