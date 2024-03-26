@@ -1,28 +1,30 @@
-.input-bg{
+.input-bg {
     border-radius: 26px;
     background: rgba(217, 217, 217, 0.08);
     backdrop-filter: blur(19.5px);
 }
 
-.rtl-btn-position{
+.rtl-btn-position {
     margin-right: -133px;
     margin-top: 8px;
 }
 
-.ltr-btn-position{
+.ltr-btn-position {
     position: absolute;
     margin-left: 20px !important;
     margin-top: 10px;
 }
 
-.Toastify__toast-container {
-    bottom: 0px !important;
-    left: 0px !important;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px !important;
-    width: 100% !important;
+@media (max-width: 450px) {
+    .Toastify__toast-container {
+        bottom: 0px !important;
+        left: 0px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px !important;
+        width: 100% !important;
+    }
 }

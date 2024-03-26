@@ -194,19 +194,33 @@
 }
 
 
+@media (max-width: 430px) {
+  .white-ball-position{
+    width: 5rem;
+    top: 10rem;
+    left: 13rem;
+  }
 
+  .blue-ball-position{
+    width: 5rem;
+    top: 11rem;
+    right: 5.8rem;
+  }
+}
 
+@media (max-width: 350px) {
+  .white-ball-position{
+    width: 3.5rem;
+    top: 10rem;
+    left: 10rem;
+  }
 
-
-
-
-
-
-
-
-
-
-
+  .blue-ball-position{
+    width: 3.5rem;
+    top: 11rem;
+    right: 6.0rem;
+  }
+}
 
 .device-image{
   background-image: url("../../assets/images/device-webapp.png");
