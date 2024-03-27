@@ -1,14 +1,8 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import Moon from "../../assets/images/white-ball.png";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Page404 = () => {
-  const { t } = useTranslation();
-  const lang = useSelector((state) => state.lng);
-
-  console.log(lang);
   return (
     <div className="h-screen w-screen bg-image relative">
       <div className="h-screen flex flex-row  justify-center text-center items-center relative">
