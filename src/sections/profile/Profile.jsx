@@ -88,7 +88,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{link}</p>
               <RiProfileLine
-                className={`text-[43px] text-xl z-50 opacity-100`}
+                className={`text-[48px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -96,7 +96,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{telegram}</p>
               <FaTelegram
-                className={`text-[43px] text-xl z-50 opacity-100`}
+                className={`text-[48px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -104,7 +104,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{insta}</p>
               <FaInstagramSquare
-                className={`text-[43px] text-xl z-50 opacity-100`}
+                className={`text-[48px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -112,7 +112,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{linkedin}</p>
               <FaLinkedin
-                className={`text-[43px] text-xl z-50 opacity-100`}
+                className={`text-[48px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -120,7 +120,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{youtube}</p>
               <FaYoutube
-                className={`text-[43px] text-xl z-50 opacity-100`}
+                className={`text-[48px] text-xl z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
