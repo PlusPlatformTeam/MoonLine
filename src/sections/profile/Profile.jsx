@@ -40,9 +40,15 @@ const Profile = () => {
     setName(name);
   }, [location.search]);
 
+  if(!name)
+  {
+    const theName = t("about.ali.name");
+    setName(theName);
+  }
+
   const selectedData = Data().find((item) => item.title === name);
   if (!selectedData) {
-    return <div>No data found for {name}</div>;
+    return <div className="text-white">No data found for {name}</div>;
   }
   const {
     img,

@@ -9,6 +9,7 @@ import WebApp from "./sections/webapp/WebApp";
 import Design from "./sections/design/Design";
 import Service from "./sections/services/Service";
 import About from "./sections/about/About";
+import Page404 from "./sections/page404/Page404";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
@@ -121,6 +122,7 @@ const App = () => {
         } />
         <Route path="/resume" element={<Resume />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
   );
