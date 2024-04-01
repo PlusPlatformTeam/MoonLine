@@ -25,7 +25,7 @@ const Profile = () => {
   const [name, setName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileNavHidden, setIsMobileNavHidden] = useState(true);
-  
+  const teamData = Data();
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
@@ -46,9 +46,9 @@ const Profile = () => {
     setName(theName);
   }
 
-  const selectedData = Data().find((item) => item.title === name);
+  var selectedData = teamData.find((item) => item.title === name);
   if (!selectedData) {
-    return <div className="text-white">No data found for {name}</div>;
+    selectedData = teamData.find((item) => item.title === t("about.ali.name"))
   }
   const {
     img,
@@ -88,7 +88,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{link}</p>
               <RiProfileLine
-                className={`text-[48px] text-xl z-50 opacity-100`}
+                className={`text-[46px] z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -96,7 +96,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{telegram}</p>
               <FaTelegram
-                className={`text-[48px] text-xl z-50 opacity-100`}
+                className={`text-[46px] z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -104,7 +104,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{insta}</p>
               <FaInstagramSquare
-                className={`text-[48px] text-xl z-50 opacity-100`}
+                className={`text-[46px] z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -112,7 +112,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{linkedin}</p>
               <FaLinkedin
-                className={`text-[48px] text-xl z-50 opacity-100`}
+                className={`text-[46px] z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -120,7 +120,7 @@ const Profile = () => {
             <div className="flex items-end justify-end">
               <p className="text-lg ml-6 text-white mb-[7px]">{youtube}</p>
               <FaYoutube
-                className={`text-[48px] text-xl z-50 opacity-100`}
+                className={`text-[46px] z-50 opacity-100`}
                 style={{ color: color }}
               />
             </div>
@@ -201,35 +201,35 @@ const Profile = () => {
           <div className="w-[80%] h-[70px] rounded-xl flex px-4 py-3 justify-between" style={{backgroundColor:bgColor}}>
           <Link to={youtube} className="relative"> 
              <FaYoutube
-                   className={`text-[43px] z-50 opacity-100`}
+                   className={`text-[35px] z-50 opacity-100`}
                    style={{ color: color }}
              />
           </Link>
 
           <Link to={linkedin}>
               <FaLinkedin
-                   className={`text-[43px] z-50 opacity-100`}
+                   className={`text-[35px] z-50 opacity-100`}
                    style={{ color: color }}
               />
           </Link>
 
           <Link to={insta}>
               <FaInstagramSquare
-                className={`text-[43px]  z-50 opacity-100`}
+                className={`text-[35px]  z-50 opacity-100`}
                 style={{ color: color }}
               />
           </Link>
 
           <Link to={telegram}>
           <FaTelegram
-                className={`text-[43px]  z-50 opacity-100`}
+                className={`text-[35px]  z-50 opacity-100`}
                 style={{ color: color }}
           />
           </Link>
 
           <Link to={link}>
                <RiProfileLine
-                     className={`text-[43px] z-50 opacity-100`}
+                     className={`text-[35px] z-50 opacity-100`}
                      style={{ color: color }}
                />
           </Link>
