@@ -177,7 +177,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="relative flex justify-center w-full mt-4 text-center" onClick={handleOpenModal}>
+      <div className="relative flex justify-center w-full mt-4 text-center cursor-pointer" onClick={handleOpenModal}>
         <div className="w-[35%] bg-[#0E2B38] rounded-full h-[35px] flex justify-between items-center gap-2  pr-3">
           <p className="text-lg text-white">{t('about.members')}</p>
           <img src={MemberIcon} alt="MemberIcon" className="h-[35px] w-[35px]"/>
@@ -202,8 +202,8 @@ const Profile = () => {
       </div>
 
       <div className="flex justify-center w-full mt-4 text-center">
-          <p className="text-white text-sm w-[70%]">
-          xttextxttexttxttexttexttexttexttexttexttext texttexttext texttexttexttext texttexttexttexttexttext
+          <p className="w-full px-2 text-sm text-justify text-white">
+          {desc}
           </p>
       </div>
 
@@ -258,7 +258,7 @@ const Profile = () => {
 const ProfileModal = ({ isOpen, onClose, title }) => {
   return (
     <div className={`${isOpen ? "block" : "hidden"} bg-black opacity-90 absolute top-0 z-[1000] h-screen w-screen`}>
-      <p className="text-3xl font-semibold text-white mt-7 mr-7" onClick={onClose}>X</p>
+      <p className="text-3xl font-semibold text-white cursor-pointer mt-7 mr-7" onClick={onClose}>X</p>
       <div className="mt-24 mr-12">
         <ProfileCard title={title} />
       </div>
