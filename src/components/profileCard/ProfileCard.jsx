@@ -11,13 +11,14 @@ const ProfileCard = ({ title }) => {
     <div className="w-full h-[510px]  overflow-y-auto no-scrollbar mt-16">
       {data.map(({ img, desc, title, bgColor, color }, index) => (
         <Link
+          key={index}
           to={`/profile?name=${title}`}
           style={{ borderColor: color }}
-          class={`flex flex-col w-10/12  md:w-11/12 h-[80px] rounded-full mb-5 mt-5 bg-[#191F2C] relative ${
+          className={`flex flex-col w-10/12  md:w-11/12 h-[80px] rounded-full mb-5 mt-5 bg-[#191F2C] relative ${
             title === name ? " border-solid border-2" : ""
           }`}
         >
-          <div class="">
+          <div className="">
             <img
               className="w-[80px] h-[80px] rounded-full absolute left-[-2px] object-cover top-[-1px]"
               src={img}
