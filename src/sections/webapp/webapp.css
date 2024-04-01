@@ -3,20 +3,20 @@
 @media (max-width: 576px) {
   @keyframes orbit {
     from {
-      transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg) translateX(95px) rotate(0deg);
     }
     to {
-      transform: translate(-50%, -50%) rotate(360deg) translateX(120px) rotate(-360deg);
+      transform: translate(-50%, -50%) rotate(360deg) translateX(95px) rotate(-360deg);
     }
   }
 
 
   @keyframes orbit-blue {
     from {
-      transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg) translateX(105px) rotate(0deg);
     }
     to {
-      transform: translate(-50%, -50%) rotate(-360deg) translateX(150px) rotate(-360deg);
+      transform: translate(-50%, -50%) rotate(-360deg) translateX(105px) rotate(-360deg);
     }
   }
 

@@ -115,6 +115,7 @@
         }        
     },
     "github": "GitHub",
-    "demo":"Demo"
+    "demo":"Demo",
+    "notFound": "PAGE NOT FOUND"
 
 }
