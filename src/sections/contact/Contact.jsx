@@ -23,7 +23,7 @@ const Contact = () => {
     try {
       if (!getCookie('sentMessage')) {
         setLoading(true);
-        api.get('/send-message', {
+        api.get('/', {
           params: data
         })
           .then(function (response) {
@@ -168,9 +168,9 @@ const Contact = () => {
                     {direction === "ltr" ? <IoIosArrowForward /> : <IoIosArrowBack />}
                   </span>
                 </button>
-                ) : (<button type="button" className="bg-cyan-500 py-2 cursor-progress text-white flex justify-between items-center gap-4 rounded-2xl px-5" disabled>
+                ) : (<button type="button" className="flex items-center justify-between gap-4 px-5 py-2 text-white bg-cyan-500 cursor-progress rounded-2xl" disabled>
                   {t('contact.processing')}
-                  <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
