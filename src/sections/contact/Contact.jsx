@@ -23,7 +23,7 @@ const Contact = () => {
     try {
       if (!getCookie('sentMessage')) {
         setLoading(true);
-        api.get('/', {
+        api.get('/send-message', {
           params: data
         })
           .then(function (response) {
