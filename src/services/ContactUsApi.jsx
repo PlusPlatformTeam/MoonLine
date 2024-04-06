@@ -1,15 +1,13 @@
-import axios from 'axios';
+import axios from "axios";
 
 // const BASE_URL = "http://localhost:4000/"
-const BASE_URL = 'https://sendtelegram.onrender.com/';
+const BASE_URL = "https://sendtelegram.onrender.com/";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
+    "Content-Type": "application/json",
   },
-  withCredentials: true,
 });
 
 axiosInstance.interceptors.response.use(
