@@ -2,7 +2,7 @@ import pooya from "../../assets/images/pooya.png";
 import ali from "../../assets/images/ali.png";
 import farzad from "../../assets/images/farzad.png";
 import shariar from "../../assets/images/shariar.png";
-import zahra from "../../assets/images/zahra.png";
+import Emineh from "../../assets/images/emineh.JPG";
 import { useTranslation } from "react-i18next";
 
 function Data() {
@@ -35,9 +35,9 @@ function Data() {
       job: t("about.shahriar.pro"),
     },
     {
-      img: zahra,
-      title: t("about.zahra.name"),
-      desc: t("about.zahra.info"),
+      img: Emineh,
+      title: t("about.Emineh.name"),
+      desc: t("about.Emineh.info"),
       bgColor: "rgba(253, 186, 116, 0.3)",
       color: "#FDBA74",
       link: "httpa://ali.com",
@@ -45,7 +45,7 @@ function Data() {
       telegram: "alijaan0",
       linkedin: "alijaan22",
       youtube: "ali.com",
-      job: t("about.zahra.pro"),
+      job: t("about.Emineh.pro"),
     },
     {
       img: farzad,
